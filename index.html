@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Relais IA - Cloud</title>
+  <script src="./firebase-config.js"></script>
+  <style>
+    :root{--bg:#050712;--panel:rgba(12,17,36,.78);--panel2:rgba(18,25,51,.9);--stroke:rgba(150,180,255,.18);--txt:#f7f9ff;--muted:#9ba7c7;--blue:#2d8cff;--violet:#b641ff;--cyan:#3ce7ff;--green:#39e99b;--red:#ff4f6d;--orange:#ffad3b;}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% -10%,rgba(45,140,255,.38),transparent 32%),radial-gradient(circle at 85% 5%,rgba(182,65,255,.30),transparent 31%),radial-gradient(circle at 50% 105%,rgba(60,231,255,.17),transparent 36%),var(--bg);color:var(--txt);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden;}
+    body:before{content:"";position:fixed;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,.035),transparent);pointer-events:none}.app{max-width:1180px;margin:auto;padding:18px 14px 90px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}.brand{display:flex;align-items:center;gap:12px}.logo{width:58px;height:58px;border-radius:22px;background:linear-gradient(135deg,var(--blue),var(--violet),var(--cyan));padding:2px;box-shadow:0 0 28px rgba(139,92,246,.45)}.logo>div{height:100%;border-radius:20px;background:#080b18;display:grid;place-items:center;font-weight:1000;font-size:20px;letter-spacing:-1px}.brand h1{margin:0;font-size:32px;line-height:1;font-weight:1000}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.gear,.pillBtn{border:1px solid var(--stroke);background:rgba(255,255,255,.06);color:var(--txt);border-radius:18px;height:48px;padding:0 15px;font-weight:800;display:flex;align-items:center;gap:8px;box-shadow:0 0 18px rgba(45,140,255,.08)}.gear{width:52px;justify-content:center;font-size:23px}.grid{display:grid;grid-template-columns:1fr;gap:14px}@media(min-width:900px){.grid{grid-template-columns:420px 1fr}.brand h1{font-size:44px}.app{padding:28px 22px}}.card{border:1px solid var(--stroke);background:var(--panel);backdrop-filter:blur(18px);border-radius:30px;box-shadow:0 20px 70px rgba(0,0,0,.28);overflow:hidden}.cardInner{padding:18px}.titleRow{display:flex;align-items:center;gap:12px;margin-bottom:14px}.roundIcon{width:44px;height:44px;border-radius:17px;display:grid;place-items:center;background:rgba(182,65,255,.16);border:1px solid rgba(182,65,255,.24);font-size:22px}.titleRow h2{margin:0;font-size:21px}.titleRow p{margin:2px 0 0;color:var(--muted);font-size:13px}label{display:block;color:#cfd7f5;font-size:13px;margin:12px 0 7px}input,textarea,select{width:100%;border:1px solid var(--stroke);background:rgba(2,5,16,.72);color:var(--txt);border-radius:17px;padding:13px 14px;outline:none;font:inherit}textarea{min-height:98px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:rgba(60,231,255,.65);box-shadow:0 0 0 3px rgba(60,231,255,.08)}.catGrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.cat{border:1px solid var(--stroke);background:rgba(4,8,22,.7);border-radius:22px;padding:14px 8px;text-align:center;min-height:118px;color:var(--txt);transition:.18s transform,.18s border,.18s background}.cat:active{transform:scale(.98)}.cat.active{border-color:rgba(60,231,255,.9);background:linear-gradient(135deg,rgba(45,140,255,.20),rgba(182,65,255,.18));box-shadow:inset 0 0 26px rgba(45,140,255,.12),0 0 22px rgba(182,65,255,.15)}.catIcon{font-size:38px;filter:drop-shadow(0 0 12px rgba(60,231,255,.55));margin-bottom:8px}.catName{text-transform:uppercase;letter-spacing:1.6px;font-weight:1000;font-size:12px}.priority{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.chip{border:1px solid var(--stroke);background:rgba(255,255,255,.05);color:var(--muted);border-radius:16px;padding:12px 8px;font-weight:900}.chip.active{color:white;border-color:rgba(45,140,255,.75);background:rgba(45,140,255,.20)}.primary{width:100%;border:0;border-radius:18px;margin-top:16px;padding:16px;background:linear-gradient(90deg,var(--blue),var(--violet));color:white;font-size:15px;font-weight:1000;box-shadow:0 12px 30px rgba(108,70,255,.28)}.secondary{border:1px solid var(--stroke);border-radius:16px;background:rgba(255,255,255,.06);color:white;padding:12px 13px;font-weight:900}.statusBar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}.stat{border:1px solid var(--stroke);background:rgba(255,255,255,.045);border-radius:20px;padding:12px}.stat span{color:var(--muted);font-size:11px}.stat b{display:block;font-size:24px;margin-top:2px}.task{border:1px solid var(--stroke);background:rgba(3,7,20,.62);border-radius:24px;padding:15px;margin-bottom:12px}.taskTop{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.task h3{margin:8px 0 7px;font-size:18px}.task p{margin:0;color:#c2c9e3;line-height:1.35;font-size:14px}.badges{display:flex;gap:7px;flex-wrap:wrap}.badge{border:1px solid var(--stroke);border-radius:999px;padding:6px 10px;font-size:11px;font-weight:1000}.bUrgent{color:#ffb4c2;background:rgba(255,79,109,.15);border-color:rgba(255,79,109,.28)}.bImportant{color:#ffd49b;background:rgba(255,173,59,.14);border-color:rgba(255,173,59,.26)}.bNormal{color:#cda7ff;background:rgba(182,65,255,.14);border-color:rgba(182,65,255,.26)}.bStatus{color:#9ce8ff;background:rgba(60,231,255,.13);border-color:rgba(60,231,255,.24)}.meta{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:12px;margin-top:12px}.toastBox{position:fixed;top:16px;right:12px;left:12px;z-index:50;display:grid;gap:10px;pointer-events:none}@media(min-width:700px){.toastBox{left:auto;width:390px}}.toast{border:1px solid rgba(60,231,255,.32);background:rgba(5,9,24,.92);backdrop-filter:blur(16px);border-radius:22px;padding:13px;display:flex;gap:12px;box-shadow:0 16px 50px rgba(0,0,0,.35),0 0 25px rgba(60,231,255,.14);animation:slide .25s ease}.toast .ti{width:42px;height:42px;border-radius:16px;display:grid;place-items:center;background:rgba(60,231,255,.14)}@keyframes slide{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}.modal{position:fixed;inset:0;background:rgba(0,0,0,.58);z-index:40;display:none;align-items:center;justify-content:center;padding:14px}.modal.show{display:flex}.modalCard{width:min(720px,100%);max-height:92vh;overflow:auto;border:1px solid var(--stroke);background:rgba(7,10,24,.96);border-radius:30px;box-shadow:0 0 80px rgba(91,82,255,.28)}.modalHead{display:flex;justify-content:space-between;align-items:center;padding:18px;border-bottom:1px solid var(--stroke)}.modalHead h2{margin:0}.close{background:rgba(255,255,255,.08);border:1px solid var(--stroke);color:white;border-radius:15px;width:42px;height:42px;font-size:22px}.userRow{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--stroke);background:rgba(255,255,255,.04);border-radius:18px;padding:11px;margin-top:9px}.avatar{width:36px;height:36px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--violet));font-weight:1000}.flex{display:flex;gap:8px;align-items:center}.small{font-size:12px;color:var(--muted)}.cloudState{font-size:12px;color:var(--muted);margin-top:8px}.cloudOk{color:#8fffd0}.cloudDemo{color:#ffd59d}.empty{padding:28px;text-align:center;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="toastBox" id="toastBox"></div>
+  <div class="app">
+    <header class="top">
+      <div class="brand"><div class="logo"><div>R<span style="color:#caa2ff">IA</span></div></div><div><h1>Relais IA</h1><p>Créez. Partagez. Notifiez. Réalisez ensemble.</p><div id="cloudState" class="cloudState">Connexion...</div></div></div>
+      <button class="gear" id="settingsBtn">⚙️</button>
+    </header>
+
+    <section class="statusBar">
+      <div class="stat"><span>Total</span><b id="statTotal">0</b></div><div class="stat"><span>À faire</span><b id="statTodo">0</b></div><div class="stat"><span>En cours</span><b id="statProgress">0</b></div><div class="stat"><span>Terminé</span><b id="statDone">0</b></div>
+    </section>
+
+    <main class="grid">
+      <section class="card"><div class="cardInner">
+        <div class="titleRow"><div class="roundIcon">＋</div><div><h2>Créer une intervention</h2><p>La catégorie concernée reçoit une notification interne.</p></div></div>
+        <label>Titre de la tâche</label><input id="title" placeholder="Ex : Vérifier la climatisation du cottage M02">
+        <label>Description</label><textarea id="description" placeholder="Décrivez clairement l'action à réaliser..."></textarea>
+        <label>Priorité</label><div class="priority" id="priorityBox"><button class="chip active" data-priority="Normal">Normal</button><button class="chip" data-priority="Important">Important</button><button class="chip" data-priority="Urgent">Urgent</button></div>
+        <label>Catégories à notifier</label><div class="catGrid" id="categoryBox"></div>
+        <button class="primary" id="createBtn">Créer et notifier</button>
+      </div></section>
+
+      <section class="card"><div class="cardInner">
+        <div class="titleRow"><div class="roundIcon">☑</div><div><h2>Interventions</h2><p>Synchronisation en temps réel avec Firebase.</p></div></div>
+        <div class="flex" style="margin-bottom:12px"><select id="filterCat"><option value="Toutes">Toutes les catégories</option></select><select id="activeUser"></select></div>
+        <div id="tasks"></div>
+      </div></section>
+    </main>
+  </div>
+
+  <div class="modal" id="settingsModal"><div class="modalCard">
+    <div class="modalHead"><h2>Réglages</h2><button class="close" id="closeSettings">×</button></div>
+    <div class="cardInner">
+      <div class="titleRow"><div class="roundIcon">👤</div><div><h2>Création des utilisateurs</h2><p>Associez chaque personne à une catégorie.</p></div></div>
+      <label>Nom de l'utilisateur</label><input id="userName" placeholder="Ex : Lucas">
+      <label>Catégorie</label><select id="userCategory"></select>
+      <button class="primary" id="addUserBtn">Ajouter l'utilisateur</button>
+      <label>Utilisateurs enregistrés</label><div id="usersList"></div>
+    </div>
+  </div></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getFirestore, collection, addDoc, onSnapshot, doc, updateDoc, deleteDoc, serverTimestamp, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+
+    const categories = [
+      {name:"Maintenance", icon:"⚙️", desc:"Technique"},
+      {name:"Propreté", icon:"🧹", desc:"Nettoyage"},
+      {name:"Réception", icon:"🛎️", desc:"Accueil"},
+      {name:"Direction", icon:"👔", desc:"Pilotage"}
+    ];
+    const defaultUsers = [{id:"demo-1",name:"Sandro",category:"Direction"},{id:"demo-2",name:"Technicien",category:"Maintenance"},{id:"demo-3",name:"Réception",category:"Réception"},{id:"demo-4",name:"Propreté",category:"Propreté"}];
+    let tasks=[], users=[], selectedCategories=["Maintenance"], selectedPriority="Normal", activeUserId=localStorage.getItem("riaActiveUser")||"demo-1", firebaseReady=false, db=null, unsubscribeTasks=null, unsubscribeUsers=null;
+    let seenTaskIds = new Set(JSON.parse(localStorage.getItem("riaSeenTasks")||"[]"));
+    const $=id=>document.getElementById(id);
+    const stateEl=$("cloudState");
+
+    function validConfig(c){return c && c.apiKey && c.appId && c.projectId;}
+    function toast(title,text,icon="🔔"){
+      const box=$("toastBox"), t=document.createElement("div");t.className="toast";t.innerHTML=`<div class="ti">${icon}</div><div><b>${title}</b><div class="small" style="margin-top:4px">${text}</div></div>`;box.prepend(t);setTimeout(()=>t.remove(),4800);
+    }
+    function saveLocal(){localStorage.setItem("riaTasks",JSON.stringify(tasks));localStorage.setItem("riaUsers",JSON.stringify(users));localStorage.setItem("riaSeenTasks",JSON.stringify([...seenTaskIds].slice(-200)));}
+    function loadLocal(){tasks=JSON.parse(localStorage.getItem("riaTasks")||"[]");users=JSON.parse(localStorage.getItem("riaUsers")||"null")||defaultUsers; if(!tasks.length){tasks=[{id:"local-1",title:"Bienvenue sur Relais IA",description:"Créez une intervention pour tester la notification interne.",priority:"Normal",status:"À faire",categories:["Maintenance"],createdBy:"Relais IA",createdAtText:"Démo locale"}]}}
+    function activeUser(){return users.find(u=>u.id===activeUserId)||users[0]||defaultUsers[0];}
+
+    function renderCategories(){const box=$("categoryBox");box.innerHTML="";categories.forEach(c=>{const b=document.createElement("button");b.className="cat"+(selectedCategories.includes(c.name)?" active":"");b.innerHTML=`<div class="catIcon">${c.icon}</div><div class="catName">${c.name}</div><div class="small">${c.desc}</div>`;b.onclick=()=>{selectedCategories=selectedCategories.includes(c.name)?selectedCategories.filter(x=>x!==c.name):[...selectedCategories,c.name]; if(!selectedCategories.length) selectedCategories=[c.name]; renderCategories();};box.appendChild(b)});
+      [$("filterCat"),$("userCategory")].forEach(sel=>{const val=sel.value;sel.innerHTML=(sel.id==="filterCat"?'<option value="Toutes">Toutes les catégories</option>':'')+categories.map(c=>`<option value="${c.name}">${c.name}</option>`).join(""); if([...sel.options].some(o=>o.value===val)) sel.value=val;});}
+
+    function renderUsers(){const sel=$("activeUser");sel.innerHTML=users.map(u=>`<option value="${u.id}">${u.name} · ${u.category}</option>`).join(""); if(users.some(u=>u.id===activeUserId)) sel.value=activeUserId; else {activeUserId=users[0]?.id; sel.value=activeUserId||"";} localStorage.setItem("riaActiveUser",activeUserId||"");
+      const list=$("usersList");list.innerHTML=users.map(u=>`<div class="userRow"><div class="flex"><div class="avatar">${u.name[0]?.toUpperCase()||"U"}</div><div><b>${u.name}</b><div class="small">${u.category}</div></div></div><button class="secondary" data-del-user="${u.id}">Supprimer</button></div>`).join("") || '<div class="empty">Aucun utilisateur</div>';
+      list.querySelectorAll("[data-del-user]").forEach(btn=>btn.onclick=()=>removeUser(btn.dataset.delUser));
+    }
+
+    function renderTasks(){const filter=$("filterCat").value;let view=tasks.filter(t=>filter==="Toutes"||t.categories?.includes(filter));$("statTotal").textContent=tasks.length;$("statTodo").textContent=tasks.filter(t=>t.status==="À faire").length;$("statProgress").textContent=tasks.filter(t=>t.status==="En cours").length;$("statDone").textContent=tasks.filter(t=>t.status==="Terminé").length;
+      const el=$("tasks"); if(!view.length){el.innerHTML='<div class="empty">Aucune intervention pour le moment.</div>';return}
+      el.innerHTML=view.map(t=>`<div class="task"><div class="taskTop"><div class="badges"><span class="badge ${t.priority==='Urgent'?'bUrgent':t.priority==='Important'?'bImportant':'bNormal'}">${t.priority}</span><span class="badge bStatus">${t.status}</span></div><button class="secondary" data-status="${t.id}">État</button></div><h3>${escapeHtml(t.title)}</h3><p>${escapeHtml(t.description)}</p><div class="meta"><span>📡 ${t.categories?.join(", ")||"-"}</span><span>👤 ${escapeHtml(t.createdBy||"-")}</span><span>🕒 ${t.createdAtText||"À l'instant"}</span></div></div>`).join("");
+      el.querySelectorAll("[data-status]").forEach(btn=>btn.onclick=()=>nextStatus(btn.dataset.status));
+    }
+    function escapeHtml(s){return String(s||"").replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[m]));}
+    function refresh(){renderCategories();renderUsers();renderTasks();}
+
+    async function initFirebase(){const cfg=window.RELAIS_IA_FIREBASE_CONFIG; if(!validConfig(cfg)){firebaseReady=false;stateEl.innerHTML='<span class="cloudDemo">Mode démo local · ajoute firebase-config.js pour le cloud</span>';loadLocal();refresh();return}
+      try{const app=initializeApp(cfg);db=getFirestore(app);firebaseReady=true;stateEl.innerHTML='<span class="cloudOk">Cloud Firebase connecté · temps réel actif</span>';
+        unsubscribeTasks=onSnapshot(query(collection(db,"tasks"),orderBy("createdAt","desc")),snap=>{const before=new Set(tasks.map(t=>t.id));tasks=snap.docs.map(d=>({id:d.id,...d.data()})); const au=activeUser(); tasks.forEach(t=>{if(!seenTaskIds.has(t.id) && !before.has(t.id) && t.categories?.includes(au?.category)){toast("Nouvelle intervention",`${t.title} · ${t.categories.join(", ")}`,"🔔");seenTaskIds.add(t.id)}});saveLocal();renderTasks();},err=>{stateEl.innerHTML='<span class="cloudDemo">Firebase connecté mais lecture bloquée : vérifier les règles Firestore</span>';console.error(err)});
+        unsubscribeUsers=onSnapshot(query(collection(db,"users")),snap=>{users=snap.docs.map(d=>({id:d.id,...d.data()})); if(!users.length) users=defaultUsers; saveLocal();renderUsers();renderTasks();},err=>console.error(err));
+      }catch(e){console.error(e);stateEl.innerHTML='<span class="cloudDemo">Erreur Firebase · mode local activé</span>';loadLocal();refresh();}
+    }
+
+    async function createTask(){const title=$("title").value.trim(), description=$("description").value.trim(); if(!title){toast("Titre manquant","Ajoute un titre avant de créer l'intervention.","⚠️");return} const au=activeUser(); const task={title,description:description||"Aucune description renseignée.",priority:selectedPriority,status:"À faire",categories:selectedCategories,createdBy:au?.name||"Utilisateur",createdByCategory:au?.category||"",createdAtText:new Date().toLocaleString("fr-FR",{dateStyle:"short",timeStyle:"short"})};
+      if(firebaseReady){await addDoc(collection(db,"tasks"),{...task,createdAt:serverTimestamp()});} else {tasks=[{...task,id:"local-"+Date.now()},...tasks];saveLocal();renderTasks();toast("Intervention créée",`${selectedCategories.join(", ")} notifié dans l'app.`,"✅");}
+      $("title").value="";$("description").value="";
+    }
+    async function nextStatus(id){const t=tasks.find(x=>x.id===id); if(!t)return; const status=t.status==="À faire"?"En cours":t.status==="En cours"?"Terminé":"À faire"; if(firebaseReady&&!String(id).startsWith("local-")){await updateDoc(doc(db,"tasks",id),{status});} else {t.status=status;saveLocal();renderTasks();}}
+    async function addUser(){const name=$("userName").value.trim(), category=$("userCategory").value; if(!name){toast("Nom manquant","Saisis le nom de l'utilisateur.","⚠️");return} const user={name,category,createdAtText:new Date().toLocaleString("fr-FR")}; if(firebaseReady){await addDoc(collection(db,"users"),{...user,createdAt:serverTimestamp()});} else {users.push({...user,id:"local-user-"+Date.now()});saveLocal();renderUsers();} $("userName").value="";toast("Utilisateur ajouté",`${name} affecté à ${category}.`,"👤");}
+    async function removeUser(id){if(firebaseReady&&!String(id).startsWith("local-")){await deleteDoc(doc(db,"users",id));} else {users=users.filter(u=>u.id!==id);saveLocal();renderUsers();}}
+
+    document.querySelectorAll("#priorityBox .chip").forEach(b=>b.onclick=()=>{selectedPriority=b.dataset.priority;document.querySelectorAll("#priorityBox .chip").forEach(x=>x.classList.remove("active"));b.classList.add("active")});
+    $("createBtn").onclick=createTask;$("addUserBtn").onclick=addUser;$("settingsBtn").onclick=()=>$("settingsModal").classList.add("show");$("closeSettings").onclick=()=>$("settingsModal").classList.remove("show");$("settingsModal").onclick=e=>{if(e.target.id==="settingsModal")$("settingsModal").classList.remove("show")};$("filterCat").onchange=renderTasks;$("activeUser").onchange=e=>{activeUserId=e.target.value;localStorage.setItem("riaActiveUser",activeUserId);toast("Utilisateur actif",`${activeUser()?.name} · ${activeUser()?.category}`,"👤")};
+    initFirebase();
+  </script>
+</body>
+</html>
