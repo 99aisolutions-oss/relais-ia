@@ -92,6 +92,7 @@
       <div class="home-actions">
         <button class="choice-card" id="goIntervention"><span class="choice-icon">＋</span><span><span class="choice-title">Création d’une intervention</span><span class="choice-sub">Accéder aux interventions autorisées pour votre catégorie.</span></span></button>
         <button class="choice-card" id="goUser"><span class="choice-icon">♙</span><span><span class="choice-title">Création d’un utilisateur</span><span class="choice-sub">Créer un prénom, une catégorie et un code PIN.</span></span></button>
+        <button class="choice-card" id="goReport"><span class="choice-icon">▤</span><span><span class="choice-title">Extraire pour rapport</span><span class="choice-sub">Exporter les interventions en CSV ou Excel. Accès Direction uniquement.</span></span></button>
       </div>
     </section>
     <div class="bottom-space"></div>
@@ -106,8 +107,6 @@
     </header>
     <div class="app-actions">
       <button class="back-home" id="backHomeFromApp">← Retour au menu principal</button>
-      <button class="export-btn" id="exportCsvBtn">📊 Exporter CSV</button>
-      <button class="export-btn" id="exportXlsxBtn">📈 Exporter Excel XLSX</button>
     </div>
     <section class="stats">
       <button class="stat" data-filter="all"><div class="stat-ico">▦</div><div class="stat-label">Total</div><div class="stat-num" id="totalCount">0</div></button>
@@ -133,6 +132,24 @@
       <div class="list-head"><button class="icon-btn" id="backCreate">←</button><div class="list-center"><div class="view-title" id="listTitle">TOTAL</div><div class="subtitle" id="listSub">Toutes les interventions</div></div><button class="icon-btn" id="closeList">×</button></div>
       <div class="search-row"><input id="search" placeholder="Rechercher..." /><button class="filter-btn">⌁</button></div>
       <div id="taskList"></div>
+    </section>
+    <div class="bottom-space"></div>
+  </main>
+  <main class="app" id="reportPage" style="display:none">
+    <header>
+      <div class="brand-mark" aria-label="Relais IA logo">
+        <div class="orbit"></div><div class="mini bell">🔔</div><div class="mini user">♙</div><div class="mini team">♚</div><div class="mini check">✓</div><div class="r-core">R</div>
+      </div>
+      <div><div class="brand-title">RELAIS IA</div><div class="tagline">CRÉEZ. PARTAGEZ. NOTIFIEZ. RÉALISEZ ENSEMBLE.</div></div>
+      <div class="cloud">Rapport Direction</div>
+    </header>
+    <button class="back-home" id="backHomeFromReport">← Retour au menu principal</button>
+    <section class="panel">
+      <div class="panel-head"><div class="plus-ring">▤</div><div class="head-text"><div class="title">Extraire pour rapport</div><div class="subtitle">Exports réservés à la Direction.</div></div></div>
+      <div class="app-actions">
+        <button class="export-btn" id="exportCsvBtn">📊 Exporter CSV</button>
+        <button class="export-btn" id="exportXlsxBtn">📈 Exporter Excel XLSX</button>
+      </div>
     </section>
     <div class="bottom-space"></div>
   </main>
@@ -189,6 +206,7 @@
     return [];
   }
   function canManageUsers(){return ['Direction','Réception'].includes(currentUser?.category)}
+  function canAccessReports(){return currentUser?.category==='Direction'}
   function canSeeTask(t){const allowed=getAllowedCategories();return allowed.includes(t.category||'')}
   function visibleTasks(){return tasks.filter(canSeeTask)}
   function loadCurrentUser(){try{currentUser=JSON.parse(localStorage.getItem(currentUserKey)||'null')}catch(e){currentUser=null}}
@@ -196,6 +214,7 @@
   function updateSessionUi(){
     if($('sessionInfo'))$('sessionInfo').textContent=currentUser?`${currentUser.firstName||'Utilisateur'} · ${icons[currentUser.category]||'▦'} ${currentUser.category||''}`:'Non connecté';
     if($('goUser'))$('goUser').classList.toggle('hidden-access',!canManageUsers());
+    if($('goReport'))$('goReport').classList.toggle('hidden-access',!canAccessReports());
     refreshCategoryAccess();
   }
   function refreshCategoryAccess(){
@@ -319,7 +338,8 @@
   function showPage(page){
     if(page!=='loginPage'&&!currentUser){page='loginPage'}
     if(page==='userPage'&&!canManageUsers()){toast('Accès réservé à la Direction et à la Réception.');page='homePage'}
-    ['loginPage','homePage','appPage','userPage'].forEach(id=>{const el=$(id); if(el)el.style.display=(id===page?'block':'none')});
+    if(page==='reportPage'&&!canAccessReports()){toast('Accès réservé à la Direction.');page='homePage'}
+    ['loginPage','homePage','appPage','reportPage','userPage'].forEach(id=>{const el=$(id); if(el)el.style.display=(id===page?'block':'none')});
     updateSessionUi();
     window.scrollTo({top:0,behavior:'smooth'});
   }
@@ -345,7 +365,7 @@
     }catch(e){console.error(e);saveUserLocal({...user,createdAt:new Date().toISOString()});showCenterPopup('✅ Utilisateur créé','done');toast('Firebase indisponible : utilisateur créé en local.');}
     finally{$('createUserBtn').disabled=false}
   }
-    function bindUI(){if($('loginBtn'))$('loginBtn').onclick=loginUser;if($('loginPin'))$('loginPin').onkeydown=e=>{if(e.key==='Enter')loginUser()};if($('logoutBtn'))$('logoutBtn').onclick=logoutUser;if($('goIntervention'))$('goIntervention').onclick=()=>showPage('appPage');if($('exportCsvBtn'))$('exportCsvBtn').onclick=exportInterventionsCsv;if($('exportXlsxBtn'))$('exportXlsxBtn').onclick=exportInterventionsXlsx;if($('goUser'))$('goUser').onclick=()=>{showPage('userPage');showUserSub(null)};if($('backHomeFromUser'))$('backHomeFromUser').onclick=()=>showPage('homePage');if($('backHomeFromApp'))$('backHomeFromApp').onclick=()=>showPage('homePage');if($('homeFromManageUsers'))$('homeFromManageUsers').onclick=()=>showPage('homePage');if($('openCreateUser'))$('openCreateUser').onclick=()=>showUserSub('create');if($('openManageUsers'))$('openManageUsers').onclick=()=>showUserSub('manage');if($('backUserMenu1'))$('backUserMenu1').onclick=()=>showUserSub(null);if($('backUserMenu2'))$('backUserMenu2').onclick=()=>showUserSub(null);if($('refreshUsers'))$('refreshUsers').onclick=()=>renderUsers();document.querySelectorAll('[data-user-category]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedUserCategory=b.dataset.userCategory;$('userCategoryCards').classList.remove('error')});if($('createUserBtn'))$('createUserBtn').onclick=createUser;document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');priority=b.dataset.priority});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{if(!getAllowedCategories().includes(b.dataset.category)){toast('Accès non autorisé pour cette catégorie.');return}document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedCategory=b.dataset.category;$('category').value=selectedCategory;$('categoryCards').classList.remove('error')});$('category').onchange=e=>{if(e.target.value&&!getAllowedCategories().includes(e.target.value)){toast('Accès non autorisé pour cette catégorie.');e.target.value='';selectedCategory='';return}selectedCategory=e.target.value;$('categoryCards').classList.remove('error');document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===selectedCategory))};document.querySelectorAll('.stat').forEach(b=>b.onclick=()=>openList(b.dataset.filter));$('backCreate').onclick=$('closeList').onclick=()=>{$('listPanel').style.display='none';$('createPanel').style.display='block'};$('search').oninput=renderList;$('createBtn').onclick=createTask;$('categoryClose').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};$('categoryCancel').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};document.querySelectorAll('.category-choice').forEach(b=>b.onclick=()=>chooseCategoryFromModal(b.dataset.modalCategory));}
+    function bindUI(){if($('loginBtn'))$('loginBtn').onclick=loginUser;if($('loginPin'))$('loginPin').onkeydown=e=>{if(e.key==='Enter')loginUser()};if($('logoutBtn'))$('logoutBtn').onclick=logoutUser;if($('goIntervention'))$('goIntervention').onclick=()=>showPage('appPage');if($('goReport'))$('goReport').onclick=()=>showPage('reportPage');if($('exportCsvBtn'))$('exportCsvBtn').onclick=exportInterventionsCsv;if($('exportXlsxBtn'))$('exportXlsxBtn').onclick=exportInterventionsXlsx;if($('goUser'))$('goUser').onclick=()=>{showPage('userPage');showUserSub(null)};if($('backHomeFromUser'))$('backHomeFromUser').onclick=()=>showPage('homePage');if($('backHomeFromApp'))$('backHomeFromApp').onclick=()=>showPage('homePage');if($('backHomeFromReport'))$('backHomeFromReport').onclick=()=>showPage('homePage');if($('homeFromManageUsers'))$('homeFromManageUsers').onclick=()=>showPage('homePage');if($('openCreateUser'))$('openCreateUser').onclick=()=>showUserSub('create');if($('openManageUsers'))$('openManageUsers').onclick=()=>showUserSub('manage');if($('backUserMenu1'))$('backUserMenu1').onclick=()=>showUserSub(null);if($('backUserMenu2'))$('backUserMenu2').onclick=()=>showUserSub(null);if($('refreshUsers'))$('refreshUsers').onclick=()=>renderUsers();document.querySelectorAll('[data-user-category]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedUserCategory=b.dataset.userCategory;$('userCategoryCards').classList.remove('error')});if($('createUserBtn'))$('createUserBtn').onclick=createUser;document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');priority=b.dataset.priority});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{if(!getAllowedCategories().includes(b.dataset.category)){toast('Accès non autorisé pour cette catégorie.');return}document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedCategory=b.dataset.category;$('category').value=selectedCategory;$('categoryCards').classList.remove('error')});$('category').onchange=e=>{if(e.target.value&&!getAllowedCategories().includes(e.target.value)){toast('Accès non autorisé pour cette catégorie.');e.target.value='';selectedCategory='';return}selectedCategory=e.target.value;$('categoryCards').classList.remove('error');document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===selectedCategory))};document.querySelectorAll('.stat').forEach(b=>b.onclick=()=>openList(b.dataset.filter));$('backCreate').onclick=$('closeList').onclick=()=>{$('listPanel').style.display='none';$('createPanel').style.display='block'};$('search').oninput=renderList;$('createBtn').onclick=createTask;$('categoryClose').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};$('categoryCancel').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};document.querySelectorAll('.category-choice').forEach(b=>b.onclick=()=>chooseCategoryFromModal(b.dataset.modalCategory));}
   async function createTask(){const title=$('title').value.trim(); if(!selectedCategory){showCategoryModal('task');return} if(!getAllowedCategories().includes(selectedCategory)){toast('Accès non autorisé pour cette catégorie.');return} if(!title){toast('Ajoute un titre pour créer l’intervention.');return} const task={title,description:$('description').value.trim(),priority,category:selectedCategory,status:'À faire',createdBy:currentUser?.firstName||'Utilisateur',createdAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()};$('createBtn').disabled=true;try{if(cloud&&fb){await fb.addDoc(fb.collection(db,'interventions'),task)}else{task.id=String(Date.now());tasks.unshift(task);saveLocal();setCounts();if($('listPanel').style.display!=='none')renderList()}$('title').value='';$('description').value='';selectedCategory='';$('category').value='';document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));showCheck();toast('Intervention créée et notifiée.')}catch(e){console.error(e);task.id=String(Date.now());task.createdAt=new Date().toISOString();tasks.unshift(task);saveLocal();setCounts();showCheck();toast('Firebase indisponible : intervention créée en local.')}finally{$('createBtn').disabled=false}}
   async function initFirebase(){if(!(cfg&&cfg.apiKey&&cfg.appId)){throw new Error('Config Firebase absente')} const appMod=await import('https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js'); const fs=await import('https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js'); const app=appMod.initializeApp(cfg); db=fs.getFirestore(app); fb=fs; cloud=true; $('cloudStatus').textContent='Cloud Firebase connecté · temps réel actif'; const q=fs.query(fs.collection(db,'interventions'),fs.orderBy('createdAt','desc')); fs.onSnapshot(q,(snap)=>{const before=tasks.length; tasks=snap.docs.map(d=>({id:d.id,...d.data()})); setCounts(); if($('listPanel').style.display!=='none')renderList(); if(before&&tasks.length>before)toast('Nouvelle intervention reçue.')},(err)=>{console.error(err);$('cloudStatus').textContent='Cloud connecté · lecture limitée';}); const uq=fs.query(fs.collection(db,'users'),fs.orderBy('createdAt','desc')); fs.onSnapshot(uq,(snap)=>{users=snap.docs.map(d=>({id:d.id,...d.data()}));renderUsers();if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) disponible(s)`:'Aucun utilisateur créé';if(!currentUser)tryAutoLogin();},(err)=>{console.error(err);});}
   bindUI(); loadLocal(); loadUsersLocal(); renderUsers(); loadCurrentUser(); updateSessionUi(); setCounts(); $('cloudStatus').textContent='Mode local · Firebase en cours de connexion'; if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) local(aux)`:'Chargement des utilisateurs...'; tryAutoLogin(); initFirebase().catch(e=>{console.warn(e);cloud=false;$('cloudStatus').textContent='Mode local · Firebase non configuré';if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) local(aux)`:'Aucun utilisateur local';renderUsers();tryAutoLogin();});
