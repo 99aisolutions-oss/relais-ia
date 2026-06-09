@@ -24,16 +24,52 @@
     .brand-title{font-size:42px;font-weight:1000;letter-spacing:2px;line-height:.9;text-transform:uppercase;background:linear-gradient(180deg,#fff 0%,#f4f1ff 35%,#79e6ff 67%,#dc4dff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 16px rgba(184,84,255,.28);white-space:nowrap}.tagline{font-size:11px;color:#fff;opacity:.92;letter-spacing:.35px;margin-top:11px;font-weight:850}.cloud{grid-column:2/3;color:var(--green);font-size:13px;font-weight:850;margin-top:-7px;text-shadow:0 0 12px rgba(0,255,220,.30)}
     .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin-bottom:24px}.stat{border:1px solid rgba(150,127,255,.37);background:linear-gradient(180deg,rgba(255,255,255,.09),rgba(16,18,48,.48));border-radius:18px;min-height:129px;padding:15px 7px;display:flex;flex-direction:column;align-items:center;justify-content:space-between;box-shadow:inset 0 0 24px rgba(142,88,255,.10);color:white}.stat:active{border-color:rgba(196,77,255,.9);box-shadow:0 0 18px rgba(178,78,255,.28),inset 0 0 28px rgba(178,78,255,.11)}.stat-ico{font-size:29px;filter:drop-shadow(0 0 9px currentColor)}.stat:nth-child(1) .stat-ico{color:#20c7ff}.stat:nth-child(2) .stat-ico{color:#ec4cff}.stat:nth-child(3) .stat-ico{color:#28a3ff}.stat:nth-child(4) .stat-ico{color:#b543ff}.stat-label{font-size:12px;color:#ebeafe;text-transform:uppercase;font-weight:850}.stat-num{font-size:34px;font-weight:1000;color:#fff;text-shadow:0 2px 12px rgba(255,255,255,.22)}
     .panel{border:1px solid var(--line);border-radius:25px;background:linear-gradient(180deg,rgba(45,35,96,.70),rgba(13,14,38,.88));box-shadow:0 18px 50px rgba(0,0,0,.28),inset 0 0 46px rgba(107,75,165,.20);padding:22px 18px;margin-bottom:20px}.panel-head{display:flex;gap:13px;align-items:center;margin-bottom:24px}.plus-ring{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:600;color:#dca4ff;border:3px solid #b552ff;box-shadow:0 0 16px rgba(181,82,255,.45), inset 0 0 15px rgba(44,195,255,.12)}.head-text{min-width:0}.title{font-size:25px;line-height:1.05;font-weight:1000;letter-spacing:.8px;text-transform:uppercase;background:linear-gradient(90deg,#22bdff,#865dff,#e54dff);-webkit-background-clip:text;background-clip:text;color:transparent}.subtitle{color:#fff;font-size:14px;margin-top:8px;line-height:1.25}.field{margin-bottom:21px}.label{font-weight:900;font-size:15px;margin-bottom:10px}input,textarea,select{width:100%;border:1px solid rgba(159,151,205,.33);border-radius:17px;background:rgba(3,5,20,.60);color:#fff;padding:17px 16px;font-size:16px;outline:none}textarea{min-height:112px;resize:vertical}input::placeholder,textarea::placeholder{color:#a9a6bc}
-    .category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px}.cat-card{height:84px;border-radius:15px;border:1px solid rgba(129,152,255,.34);background:rgba(12,16,42,.36);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#b7dfff;font-weight:850;font-size:12px;gap:7px;box-shadow:inset 0 0 22px rgba(50,150,255,.08)}.cat-card .cat-ico{font-size:29px;filter:drop-shadow(0 0 9px currentColor)}.cat-card:nth-child(2),.cat-card:nth-child(4){border-color:rgba(198,84,255,.39);color:#ee79ff}.cat-card.active{border-color:#c451ff;box-shadow:0 0 18px rgba(196,81,255,.30),inset 0 0 28px rgba(196,81,255,.12)}
+    .category-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:22px}.cat-card{height:84px;border-radius:15px;border:1px solid rgba(129,152,255,.34);background:rgba(12,16,42,.36);display:flex;flex-direction:column;align-items:center;justify-content:center;color:#b7dfff;font-weight:850;font-size:12px;gap:7px;box-shadow:inset 0 0 22px rgba(50,150,255,.08)}.cat-card .cat-ico{font-size:29px;filter:drop-shadow(0 0 9px currentColor)}.cat-card:nth-child(2),.cat-card:nth-child(4){border-color:rgba(198,84,255,.39);color:#ee79ff}.cat-card.active{border-color:#c451ff;box-shadow:0 0 18px rgba(196,81,255,.30),inset 0 0 28px rgba(196,81,255,.12)}
     .priority{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pill{height:54px;border-radius:17px;border:1px solid rgba(151,151,196,.33);background:rgba(255,255,255,.045);color:#f0eefc;font-weight:950;font-size:14px}.pill.active{border-color:#c451ff;box-shadow:0 0 15px rgba(196,81,255,.30);background:rgba(123,65,194,.16)}.select-wrap{position:relative}.select-wrap:after{content:'⌄';position:absolute;right:18px;top:50%;transform:translateY(-58%);font-size:28px;color:white;pointer-events:none}select{appearance:none;-webkit-appearance:none}.cta{margin-top:8px;width:100%;border:0;border-radius:20px;padding:22px 12px;font-size:19px;font-weight:1000;color:#fff;letter-spacing:.7px;background:linear-gradient(90deg,#842dff,#9e35ff,#cf25f8);box-shadow:0 0 24px rgba(185,42,255,.42)}.cta:disabled{opacity:.55}
-    .list-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px}.icon-btn{border:0;background:transparent;color:white;font-size:31px;line-height:1;padding:4px 8px}.list-center{text-align:center;flex:1}.view-title{font-size:24px;font-weight:1000;text-transform:uppercase;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent}.search-row{display:grid;grid-template-columns:1fr 50px;gap:12px;margin-bottom:18px}.filter-btn{border:1px solid rgba(159,151,205,.33);border-radius:17px;background:rgba(255,255,255,.05);color:white;font-size:23px}.task{border:1px solid rgba(151,151,196,.27);background:rgba(12,16,42,.42);border-radius:18px;padding:15px;margin-top:13px}.task-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.task-title{font-weight:950;font-size:16px;line-height:1.25}.badge{font-size:12px;font-weight:950;padding:8px 10px;border-radius:13px;border:1px solid rgba(255,255,255,.12);white-space:nowrap}.urgent{color:#ff5968;border-color:rgba(255,65,80,.60);background:rgba(255,60,80,.09)}.important,.normal{color:#f0c9ff;border-color:rgba(170,100,255,.55);background:rgba(120,70,190,.13)}.task-desc{color:#d8d7ee;margin-top:8px;font-size:13px;line-height:1.35}.task-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;color:#c5c6df;font-size:12px}.status{margin-left:auto;font-weight:1000;text-transform:uppercase}.status-btn{margin-left:auto;border:0;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:1000;text-transform:uppercase;white-space:nowrap;letter-spacing:.2px;display:inline-flex;align-items:center;gap:7px;transition:transform .14s ease,filter .14s ease,box-shadow .14s ease}.status-btn:active{transform:scale(.96);filter:brightness(1.1)}.st-todo{color:#8a23c7;background:linear-gradient(135deg,#f0b7ff,#c77aff);box-shadow:0 0 20px rgba(210,99,255,.35),inset 0 0 12px rgba(255,255,255,.18)}.st-progress{color:#0563a7;background:linear-gradient(135deg,#b9ecff,#78c9ff);box-shadow:0 0 20px rgba(72,184,255,.35),inset 0 0 12px rgba(255,255,255,.18)}.st-done{color:#076c23;background:linear-gradient(135deg,#bdffb8,#76ef8d);box-shadow:0 0 20px rgba(78,255,119,.33),inset 0 0 12px rgba(255,255,255,.18)}.empty{color:#eceafa;text-align:center;padding:32px 0}.state-btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white;border-radius:12px;padding:9px 12px;font-weight:900}.desc-btn{border:1px solid rgba(95,204,255,.45);background:linear-gradient(135deg,rgba(49,169,255,.12),rgba(188,77,255,.12));color:#fff;border-radius:12px;padding:9px 12px;font-weight:900;box-shadow:0 0 14px rgba(70,160,255,.12);display:inline-flex;align-items:center;gap:7px}.desc-btn:active{transform:scale(.97);filter:brightness(1.12)}.desc-modal{position:fixed;inset:0;background:rgba(2,3,16,.55);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:20;padding:18px}.desc-modal.show{display:flex}.desc-card{width:min(92vw,430px);border-radius:24px;background:linear-gradient(180deg,rgba(34,22,75,.98),rgba(10,12,38,.98));border:1px solid rgba(197,81,255,.72);box-shadow:0 0 38px rgba(180,79,255,.34),inset 0 0 24px rgba(255,255,255,.06);padding:22px;position:relative}.desc-close{position:absolute;right:14px;top:12px;border:0;background:rgba(255,255,255,.07);color:white;border-radius:50%;width:38px;height:38px;font-size:24px}.desc-title{font-size:22px;font-weight:1000;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:42px}.desc-cat{margin-top:9px;color:#76d7ff;font-weight:900}.desc-text{margin-top:16px;color:#fff;line-height:1.45;font-size:16px;white-space:pre-wrap;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:16px;min-height:90px}.desc-empty{color:#bfc2df;font-style:italic}.toast{position:fixed;left:50%;top:18px;transform:translateX(-50%);width:min(92vw,440px);background:rgba(17,13,44,.96);border:1px solid rgba(197,81,255,.75);box-shadow:0 0 30px rgba(197,81,255,.35);border-radius:18px;padding:14px 16px;z-index:5;font-weight:900;display:none}.toast.show{display:block}.success-check{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.75);width:112px;height:112px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:62px;background:rgba(14,10,38,.90);border:2px solid rgba(25,240,208,.90);box-shadow:0 0 34px rgba(25,240,208,.42),inset 0 0 25px rgba(25,240,208,.16);z-index:9;opacity:0;pointer-events:none;transition:opacity .12s ease, transform .12s ease}.success-check.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.status-flash{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.78);min-width:154px;min-height:112px;background:rgba(12,10,34,.96);border:1px solid rgba(199,81,255,.70);box-shadow:0 0 34px rgba(185,78,255,.38),inset 0 0 22px rgba(255,255,255,.08);border-radius:22px;padding:22px 24px;color:#fff;font-size:20px;font-weight:1000;z-index:10;opacity:0;pointer-events:none;transition:opacity .13s ease,transform .13s ease;display:flex;align-items:center;justify-content:center;text-align:center}.status-flash.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.status-flash.progress{border-color:rgba(104,205,255,.90);box-shadow:0 0 34px rgba(88,190,255,.38),inset 0 0 22px rgba(88,190,255,.10)}.status-flash.done{border-color:rgba(102,255,125,.90);box-shadow:0 0 34px rgba(78,255,119,.38),inset 0 0 22px rgba(78,255,119,.10)}.status-flash.todo{border-color:rgba(255,88,105,.92);box-shadow:0 0 34px rgba(255,78,96,.36),inset 0 0 22px rgba(255,78,96,.10)}.return-todo-btn{margin-left:auto;border:0;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:1000;text-transform:uppercase;white-space:nowrap;letter-spacing:.2px;display:inline-flex;align-items:center;gap:7px;color:#ff5968;background:linear-gradient(135deg,rgba(255,73,94,.12),rgba(255,73,94,.28));border:1px solid rgba(255,73,94,.72);box-shadow:0 0 18px rgba(255,73,94,.26),inset 0 0 12px rgba(255,255,255,.07);transition:transform .14s ease,filter .14s ease,box-shadow .14s ease}.return-todo-btn:active{transform:scale(.96);filter:brightness(1.12)}.category-grid.error .cat-card{border-color:rgba(255,78,120,.85);box-shadow:0 0 16px rgba(255,78,120,.30),inset 0 0 22px rgba(255,78,120,.12)}.bottom-space{height:24px}.login-panel{margin-top:18px}.session-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(37,223,255,.36);border-radius:999px;background:rgba(6,12,40,.48);padding:9px 12px;font-size:13px;font-weight:950;color:#fff;box-shadow:0 0 16px rgba(37,223,255,.10)}.logout-btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;border-radius:13px;padding:9px 12px;font-weight:950}.login-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}.login-error{display:none;margin-top:12px;color:#ff8aa0;font-weight:950;text-align:center}.login-error.show{display:block}.hidden-access{display:none!important}.access-note{color:#efeafe;font-size:13px;font-weight:800;margin-top:10px;line-height:1.25}
+    .list-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:18px}.icon-btn{border:0;background:transparent;color:white;font-size:31px;line-height:1;padding:4px 8px}.list-center{text-align:center;flex:1}.view-title{font-size:24px;font-weight:1000;text-transform:uppercase;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent}.search-row{display:grid;grid-template-columns:1fr 50px;gap:12px;margin-bottom:18px}.search-wrap{position:relative}.search-wrap input{width:100%;padding-right:44px}.clear-search-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);border:0;background:rgba(255,255,255,.08);color:#fff;border-radius:50%;width:28px;height:28px;font-size:18px;font-weight:1000;line-height:1;display:none;align-items:center;justify-content:center;box-shadow:0 0 14px rgba(255,255,255,.12)}.clear-search-btn.show{display:flex}.clear-search-btn:active{transform:translateY(-50%) scale(.92);filter:brightness(1.15)}.filter-btn{border:1px solid rgba(159,151,205,.33);border-radius:17px;background:rgba(255,255,255,.05);color:white;font-size:23px}.task{border:1px solid rgba(151,151,196,.27);background:rgba(12,16,42,.42);border-radius:18px;padding:15px;margin-top:13px}.task-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.task-title{font-weight:950;font-size:16px;line-height:1.25}.badge{font-size:12px;font-weight:950;padding:8px 10px;border-radius:13px;border:1px solid rgba(255,255,255,.12);white-space:nowrap}.urgent{color:#ff5968;border-color:rgba(255,65,80,.72);background:linear-gradient(135deg,rgba(255,54,76,.18),rgba(120,20,48,.18));box-shadow:0 0 15px rgba(255,54,76,.22)}.important{color:#ffcf5a;border-color:rgba(255,188,54,.76);background:linear-gradient(135deg,rgba(255,184,45,.20),rgba(255,111,0,.13));box-shadow:0 0 15px rgba(255,174,35,.24),inset 0 0 10px rgba(255,255,255,.06)}.normal{color:#f0c9ff;border-color:rgba(170,100,255,.55);background:rgba(120,70,190,.13)}.task-desc{color:#d8d7ee;margin-top:8px;font-size:13px;line-height:1.35}.task-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;color:#c5c6df;font-size:12px}.handler-pill{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(95,204,255,.42);background:linear-gradient(135deg,rgba(49,169,255,.14),rgba(188,77,255,.12));color:#ffffff;border-radius:999px;padding:6px 9px;font-weight:950;box-shadow:0 0 13px rgba(70,160,255,.12)}.status{margin-left:auto;font-weight:1000;text-transform:uppercase}.status-btn{margin-left:auto;border:0;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:1000;text-transform:uppercase;white-space:nowrap;letter-spacing:.2px;display:inline-flex;align-items:center;gap:7px;transition:transform .14s ease,filter .14s ease,box-shadow .14s ease}.status-btn:active{transform:scale(.96);filter:brightness(1.1)}.st-todo{color:#8a23c7;background:linear-gradient(135deg,#f0b7ff,#c77aff);box-shadow:0 0 20px rgba(210,99,255,.35),inset 0 0 12px rgba(255,255,255,.18)}.st-progress{color:#0563a7;background:linear-gradient(135deg,#b9ecff,#78c9ff);box-shadow:0 0 20px rgba(72,184,255,.35),inset 0 0 12px rgba(255,255,255,.18)}.st-done{color:#076c23;background:linear-gradient(135deg,#bdffb8,#76ef8d);box-shadow:0 0 20px rgba(78,255,119,.33),inset 0 0 12px rgba(255,255,255,.18)}.empty{color:#eceafa;text-align:center;padding:32px 0}.state-btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white;border-radius:12px;padding:9px 12px;font-weight:900}.desc-btn{border:1px solid rgba(95,204,255,.45);background:linear-gradient(135deg,rgba(49,169,255,.12),rgba(188,77,255,.12));color:#fff;border-radius:12px;padding:9px 12px;font-weight:900;box-shadow:0 0 14px rgba(70,160,255,.12);display:inline-flex;align-items:center;gap:7px}.desc-btn:active{transform:scale(.97);filter:brightness(1.12)}.transfer-btn{border:1px solid rgba(255,207,90,.55);background:linear-gradient(135deg,rgba(255,188,54,.14),rgba(196,81,255,.14));color:#fff;border-radius:12px;padding:9px 12px;font-weight:900;box-shadow:0 0 14px rgba(255,188,54,.14);display:inline-flex;align-items:center;gap:7px}.transfer-btn:active{transform:scale(.97);filter:brightness(1.12)}.desc-modal{position:fixed;inset:0;background:rgba(2,3,16,.55);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:20;padding:18px}.desc-modal.show{display:flex}.desc-card{width:min(92vw,430px);border-radius:24px;background:linear-gradient(180deg,rgba(34,22,75,.98),rgba(10,12,38,.98));border:1px solid rgba(197,81,255,.72);box-shadow:0 0 38px rgba(180,79,255,.34),inset 0 0 24px rgba(255,255,255,.06);padding:22px;position:relative}.desc-close{position:absolute;right:14px;top:12px;border:0;background:rgba(255,255,255,.07);color:white;border-radius:50%;width:38px;height:38px;font-size:24px}.desc-title{font-size:22px;font-weight:1000;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:42px}.desc-cat{margin-top:9px;color:#76d7ff;font-weight:900}.desc-text{margin-top:16px;color:#fff;line-height:1.45;font-size:16px;white-space:pre-wrap;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:16px;min-height:90px}.desc-empty{color:#bfc2df;font-style:italic}.desc-section{margin-top:14px;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.10);border-radius:18px;padding:14px}.desc-section-title{font-weight:1000;margin-bottom:8px;display:flex;align-items:center;gap:7px}.desc-section.blue{border-color:rgba(80,190,255,.35);box-shadow:inset 0 0 18px rgba(42,168,255,.06)}.desc-section.orange{border-color:rgba(255,177,50,.46);box-shadow:inset 0 0 18px rgba(255,177,50,.08)}.desc-section.purple{border-color:rgba(197,81,255,.42);box-shadow:inset 0 0 18px rgba(197,81,255,.08)}.desc-section.green{border-color:rgba(80,255,125,.38);box-shadow:inset 0 0 18px rgba(80,255,125,.08)}.desc-meta-line{color:#cfd0eb;font-size:13px;margin-top:7px;line-height:1.35}.desc-comment{color:#fff;white-space:pre-wrap;line-height:1.42}.toast{position:fixed;left:50%;top:18px;transform:translateX(-50%);width:min(92vw,440px);background:rgba(17,13,44,.96);border:1px solid rgba(197,81,255,.75);box-shadow:0 0 30px rgba(197,81,255,.35);border-radius:18px;padding:14px 16px;z-index:5;font-weight:900;display:none}.toast.show{display:block}.success-check{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.75);width:112px;height:112px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:62px;background:rgba(14,10,38,.90);border:2px solid rgba(25,240,208,.90);box-shadow:0 0 34px rgba(25,240,208,.42),inset 0 0 25px rgba(25,240,208,.16);z-index:9;opacity:0;pointer-events:none;transition:opacity .12s ease, transform .12s ease}.success-check.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.status-flash{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.78);min-width:154px;min-height:112px;background:rgba(12,10,34,.96);border:1px solid rgba(199,81,255,.70);box-shadow:0 0 34px rgba(185,78,255,.38),inset 0 0 22px rgba(255,255,255,.08);border-radius:22px;padding:22px 24px;color:#fff;font-size:20px;font-weight:1000;z-index:10;opacity:0;pointer-events:none;transition:opacity .13s ease,transform .13s ease;display:flex;align-items:center;justify-content:center;text-align:center}.status-flash.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.status-flash.progress{border-color:rgba(104,205,255,.90);box-shadow:0 0 34px rgba(88,190,255,.38),inset 0 0 22px rgba(88,190,255,.10)}.status-flash.done{border-color:rgba(102,255,125,.90);box-shadow:0 0 34px rgba(78,255,119,.38),inset 0 0 22px rgba(78,255,119,.10)}.status-flash.todo{border-color:rgba(255,88,105,.92);box-shadow:0 0 34px rgba(255,78,96,.36),inset 0 0 22px rgba(255,78,96,.10)}.return-todo-btn{margin-left:auto;border:0;border-radius:14px;padding:10px 14px;font-size:12px;font-weight:1000;text-transform:uppercase;white-space:nowrap;letter-spacing:.2px;display:inline-flex;align-items:center;gap:7px;color:#ff5968;background:linear-gradient(135deg,rgba(255,73,94,.12),rgba(255,73,94,.28));border:1px solid rgba(255,73,94,.72);box-shadow:0 0 18px rgba(255,73,94,.26),inset 0 0 12px rgba(255,255,255,.07);transition:transform .14s ease,filter .14s ease,box-shadow .14s ease}.return-todo-btn:active{transform:scale(.96);filter:brightness(1.12)}.category-grid.error .cat-card{border-color:rgba(255,78,120,.85);box-shadow:0 0 16px rgba(255,78,120,.30),inset 0 0 22px rgba(255,78,120,.12)}.bottom-space{height:24px}.login-panel{margin-top:18px}.session-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(37,223,255,.36);border-radius:999px;background:rgba(6,12,40,.48);padding:9px 12px;font-size:13px;font-weight:950;color:#fff;box-shadow:0 0 16px rgba(37,223,255,.10)}.logout-btn{border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;border-radius:13px;padding:9px 12px;font-weight:950}.login-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}.login-error{display:none;margin-top:12px;color:#ff8aa0;font-weight:950;text-align:center}.login-error.show{display:block}.hidden-access{display:none!important}.access-note{color:#efeafe;font-size:13px;font-weight:800;margin-top:10px;line-height:1.25}
     
     .category-modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(3,4,16,.58);backdrop-filter:blur(5px);z-index:9}.category-modal.show{display:flex}.category-box{width:min(92vw,390px);border-radius:26px;background:linear-gradient(180deg,rgba(35,19,68,.98),rgba(10,10,34,.98));border:1px solid rgba(255,75,105,.72);box-shadow:0 0 38px rgba(255,57,96,.36),0 0 42px rgba(197,81,255,.25),inset 0 0 35px rgba(158,67,255,.14);padding:24px 20px 18px;text-align:center;position:relative}.category-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.20);background:rgba(255,255,255,.06);color:#fff;font-size:27px;line-height:1}.category-alert{width:70px;height:70px;margin:0 auto 10px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:42px;color:#ff5f77;border:2px solid rgba(255,92,115,.9);box-shadow:0 0 22px rgba(255,74,95,.55),inset 0 0 18px rgba(255,74,95,.12)}.category-box h3{margin:8px 0 6px;font-size:25px;text-transform:uppercase;letter-spacing:.7px}.category-box p{margin:0 0 16px;color:#f0eafa;line-height:1.25}.category-options{display:grid;grid-template-columns:1fr 1fr;gap:12px}.category-choice{min-height:74px;border-radius:16px;border:1px solid rgba(80,191,255,.70);background:rgba(7,15,44,.78);box-shadow:0 0 17px rgba(37,185,255,.18),inset 0 0 20px rgba(37,185,255,.08);color:#aee4ff;font-weight:1000;text-transform:uppercase;display:flex;align-items:center;justify-content:center;gap:8px;flex-direction:column}.category-choice:nth-child(2),.category-choice:nth-child(4){border-color:rgba(221,74,255,.75);color:#ff8cff;box-shadow:0 0 17px rgba(221,74,255,.18),inset 0 0 20px rgba(221,74,255,.08)}.category-choice .cat-ico{font-size:28px}.category-cancel{margin-top:14px;border:0;background:transparent;color:#d9d1ec;font-weight:900;font-size:14px}
 
-    .home-actions{display:grid;grid-template-columns:1fr;gap:16px;margin-top:12px}.choice-card{border:1px solid rgba(145,180,255,.40);border-radius:22px;background:linear-gradient(135deg,rgba(43,41,105,.70),rgba(13,14,38,.86));box-shadow:0 18px 42px rgba(0,0,0,.22),inset 0 0 30px rgba(120,84,255,.14);padding:22px 18px;color:#fff;text-align:left;display:flex;align-items:center;gap:16px}.choice-card:active{transform:scale(.985);border-color:rgba(205,82,255,.90);box-shadow:0 0 24px rgba(195,78,255,.30),inset 0 0 34px rgba(195,78,255,.12)}.choice-icon{width:58px;height:58px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:31px;background:rgba(255,255,255,.06);border:1px solid rgba(95,210,255,.42);box-shadow:0 0 18px rgba(95,210,255,.18)}.choice-title{font-size:18px;font-weight:1000;text-transform:uppercase;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent}.choice-sub{font-size:13px;color:#eeeafc;margin-top:5px;line-height:1.25}.back-home{margin-bottom:16px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white;border-radius:15px;padding:11px 15px;font-weight:950}.app-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:16px}.export-btn{border:1px solid rgba(43,219,255,.35);background:linear-gradient(135deg,rgba(34,156,255,.18),rgba(196,81,255,.16));color:white;border-radius:15px;padding:13px 15px;font-weight:1000;box-shadow:0 0 18px rgba(47,190,255,.14),inset 0 0 18px rgba(196,81,255,.08);text-align:left}.export-btn:active{transform:scale(.985);filter:brightness(1.12)}.user-category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}.user-category-grid .cat-card{height:82px}.user-category-grid.error .cat-card{border-color:rgba(255,78,120,.85);box-shadow:0 0 16px rgba(255,78,120,.30),inset 0 0 22px rgba(255,78,120,.12)}
+    .home-actions{display:grid;grid-template-columns:1fr;gap:16px;margin-top:12px}.choice-card{border:1px solid rgba(145,180,255,.40);border-radius:22px;background:linear-gradient(135deg,rgba(43,41,105,.70),rgba(13,14,38,.86));box-shadow:0 18px 42px rgba(0,0,0,.22),inset 0 0 30px rgba(120,84,255,.14);padding:22px 18px;color:#fff;text-align:left;display:flex;align-items:center;gap:16px}.choice-card:active{transform:scale(.985);border-color:rgba(205,82,255,.90);box-shadow:0 0 24px rgba(195,78,255,.30),inset 0 0 34px rgba(195,78,255,.12)}.choice-icon{width:58px;height:58px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:31px;background:rgba(255,255,255,.06);border:1px solid rgba(95,210,255,.42);box-shadow:0 0 18px rgba(95,210,255,.18)}.choice-title{font-size:18px;font-weight:1000;text-transform:uppercase;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent}.choice-sub{font-size:13px;color:#eeeafc;margin-top:5px;line-height:1.25}.back-home{margin-bottom:16px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:white;border-radius:15px;padding:11px 15px;font-weight:950}.app-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:16px}.export-btn{border:1px solid rgba(43,219,255,.35);background:linear-gradient(135deg,rgba(34,156,255,.18),rgba(196,81,255,.16));color:white;border-radius:15px;padding:13px 15px;font-weight:1000;box-shadow:0 0 18px rgba(47,190,255,.14),inset 0 0 18px rgba(196,81,255,.08);text-align:left}.export-btn:active{transform:scale(.985);filter:brightness(1.12)}.multi-toggle{width:100%;border:1px solid rgba(197,81,255,.45);background:linear-gradient(135deg,rgba(132,45,255,.20),rgba(34,156,255,.12));color:#fff;border-radius:17px;padding:14px 15px;font-weight:1000;text-align:left;box-shadow:0 0 18px rgba(196,81,255,.16),inset 0 0 18px rgba(255,255,255,.06)}.multi-toggle.active{border-color:#c451ff;background:linear-gradient(135deg,rgba(196,81,255,.30),rgba(34,156,255,.18));box-shadow:0 0 22px rgba(196,81,255,.28)}.multi-box{display:none;border:1px solid rgba(95,204,255,.30);border-radius:20px;background:rgba(8,10,34,.30);padding:14px;margin-bottom:20px}.multi-box.show{display:block}.small-help{color:#d8d4f0;font-size:12px;line-height:1.35;margin-top:8px;font-weight:750}.schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.schedule-grid input{padding:15px 12px}
+    .direction-dashboard{display:grid;gap:14px}
+    .direction-section{border:1px solid rgba(95,210,255,.28);border-radius:18px;background:rgba(8,10,34,.32);padding:14px;box-shadow:inset 0 0 22px rgba(80,160,255,.08)}
+    .direction-section-title{font-weight:1000;text-transform:uppercase;font-size:15px;margin-bottom:10px;color:#e9e6ff}
+    .direction-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .direction-kpi{border:1px solid rgba(160,130,255,.34);border-radius:16px;background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(12,14,45,.52));color:white;padding:12px 10px;text-align:left;min-height:82px;box-shadow:inset 0 0 18px rgba(150,90,255,.08)}
+    .direction-kpi:active{transform:scale(.985);filter:brightness(1.13);border-color:rgba(211,78,255,.88)}
+    .direction-kpi .kpi-label{font-size:12px;text-transform:uppercase;color:#eeeaff;font-weight:950}
+    .direction-kpi .kpi-num{font-size:30px;font-weight:1000;margin-top:5px;text-shadow:0 0 12px rgba(255,255,255,.22)}
+    .direction-kpi .kpi-sub{font-size:12px;color:#d7d2ef;margin-top:2px;line-height:1.25}
+    .direction-kpi.urgent{border-color:rgba(255,74,92,.70);box-shadow:0 0 15px rgba(255,54,76,.16),inset 0 0 16px rgba(255,54,76,.08)}
+    .direction-kpi.done{border-color:rgba(95,255,165,.55);box-shadow:0 0 15px rgba(95,255,165,.12),inset 0 0 16px rgba(95,255,165,.07)}
+.user-category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:20px}.user-category-grid .cat-card{height:82px}.user-category-grid.error .cat-card{border-color:rgba(255,78,120,.85);box-shadow:0 0 16px rgba(255,78,120,.30),inset 0 0 22px rgba(255,78,120,.12)}
+
+    .time-stats{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px}.time-card{border:1px solid rgba(95,204,255,.30);background:linear-gradient(135deg,rgba(28,38,95,.56),rgba(14,12,42,.84));border-radius:18px;padding:15px;box-shadow:inset 0 0 24px rgba(75,170,255,.08)}.time-title{font-size:15px;font-weight:1000;color:#fff;margin-bottom:8px}.time-line{color:#d9dcff;font-size:13px;line-height:1.55}.time-value{font-size:24px;font-weight:1000;color:#fff;text-shadow:0 0 12px rgba(255,255,255,.20)}.time-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}.time-mini{border:1px solid rgba(197,81,255,.34);background:rgba(8,10,30,.36);border-radius:16px;padding:12px;text-align:center}.time-mini.clickable{cursor:pointer;transition:transform .14s ease,filter .14s ease,border-color .14s ease,box-shadow .14s ease}.time-mini.clickable:active{transform:scale(.97);filter:brightness(1.16);border-color:rgba(225,77,255,.88);box-shadow:0 0 20px rgba(197,81,255,.28),inset 0 0 20px rgba(197,81,255,.10)}.time-mini .label{font-size:11px;text-transform:uppercase;color:#cfd0eb;font-weight:900}.time-mini .num{font-size:22px;font-weight:1000;margin-top:5px;color:#fff}.time-mini .hint{font-size:10px;color:#bfb8df;margin-top:5px;font-weight:850}.time-history{margin-top:12px;display:grid;gap:10px}.time-task{border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.20);border-radius:16px;padding:12px}.time-task strong{color:#fff}.time-detail-head{border:1px solid rgba(95,204,255,.34);background:rgba(42,168,255,.08);border-radius:16px;padding:12px;margin-bottom:12px}.time-detail-row{border:1px solid rgba(255,255,255,.12);background:rgba(0,0,0,.20);border-radius:16px;padding:12px;margin-top:10px}.time-detail-title{font-weight:1000;color:#fff;font-size:15px}.time-detail-duration{font-size:18px;font-weight:1000;color:#fff;margin-top:6px}.time-empty{color:#c9c9e8;text-align:center;padding:16px 0;font-weight:850}
+
+    .reception-overview-title{display:none;text-align:center;margin:-14px 0 8px;color:#fff;font-weight:1000;text-transform:uppercase;letter-spacing:.6px;text-shadow:0 0 12px rgba(197,81,255,.40)}
+    .reception-overview-title.show{display:block}
+    .stats.reception-row{display:none;margin-top:-12px;margin-bottom:24px;gap:9px}
+    .stats.reception-row.show{display:grid}
+    .stats.reception-row .stat{min-height:95px;border-color:rgba(198,84,255,.58);background:linear-gradient(180deg,rgba(112,48,166,.62),rgba(57,25,98,.82));box-shadow:0 0 20px rgba(196,81,255,.23),inset 0 0 28px rgba(196,81,255,.18)}
+    .stats.reception-row .stat-ico{font-size:23px}.stats.reception-row .stat-label{font-size:10px}.stats.reception-row .stat-num{font-size:27px}
+    .stats.proprete-main .stat,.stats.maintenance-main .stat{border-color:rgba(198,84,255,.58);background:linear-gradient(180deg,rgba(112,48,166,.62),rgba(57,25,98,.82));box-shadow:0 0 20px rgba(196,81,255,.23),inset 0 0 28px rgba(196,81,255,.18)}
+
+
+    .period-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+    .period-row input{font-size:13px;padding:13px 12px;border-radius:15px}
+    .period-label{color:#e9e6ff;font-weight:950;font-size:12px;text-transform:uppercase;margin-bottom:7px}
 @media(max-width:390px){.app{padding-top:24px}.brand-title{font-size:30px}.brand-mark{width:88px;height:88px}.r-core{font-size:68px}header{grid-template-columns:92px 1fr}.stats{gap:8px}.stat{min-height:114px}.category-grid{gap:8px}.cat-card{height:76px;font-size:11px}.title{font-size:22px}.panel{padding:20px 16px}}
   
     .user-choice{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:18px}.user-choice-btn{border:1px solid rgba(190,145,255,.38);border-radius:22px;background:linear-gradient(135deg,rgba(77,50,158,.58),rgba(16,18,48,.66));color:#fff;padding:20px 16px;text-align:left;font-weight:1000;font-size:18px;box-shadow:0 0 22px rgba(142,88,255,.14),inset 0 0 26px rgba(151,81,255,.10)}.user-choice-btn span{display:block;margin-top:7px;font-size:13px;font-weight:800;color:#e2def7}.user-choice-btn.active{border-color:#c451ff;box-shadow:0 0 20px rgba(196,81,255,.28),inset 0 0 30px rgba(196,81,255,.14)}.user-subpage{display:none}.user-subpage.show{display:block}.user-list{display:flex;flex-direction:column;gap:13px}.user-card{border:1px solid rgba(151,151,196,.30);background:rgba(12,16,42,.42);border-radius:18px;padding:15px}.user-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.user-name{font-size:18px;font-weight:1000}.user-cat{color:#d9ccff;font-size:13px;font-weight:850}.edit-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}.edit-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.edit-cat{border:1px solid rgba(129,152,255,.32);border-radius:13px;background:rgba(255,255,255,.04);color:white;padding:9px 4px;font-size:18px}.edit-cat.active{border-color:#c451ff;box-shadow:0 0 15px rgba(196,81,255,.28);background:rgba(196,81,255,.13)}.user-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.save-user,.delete-user{border:0;border-radius:14px;padding:12px 10px;font-size:13px;font-weight:1000;color:white}.save-user{background:linear-gradient(90deg,#2c98ff,#b546ff);box-shadow:0 0 16px rgba(80,150,255,.24)}.delete-user{background:linear-gradient(90deg,#ff3967,#9b2dff);box-shadow:0 0 16px rgba(255,57,103,.20)}
+
+
+    .task.direction-action{border-color:rgba(255,65,94,.86);background:linear-gradient(135deg,rgba(255,45,78,.18),rgba(40,8,28,.62));box-shadow:0 0 22px rgba(255,54,76,.24),inset 0 0 22px rgba(255,54,76,.08)}
+    .direction-alert{display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,65,94,.72);background:rgba(255,45,78,.16);color:#fff;border-radius:999px;padding:6px 9px;font-weight:1000;box-shadow:0 0 12px rgba(255,54,76,.20)}
+    .resolution-modal{position:fixed;inset:0;background:rgba(2,3,16,.62);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:22;padding:18px}.resolution-modal.show{display:flex}
+    .resolution-card{width:min(92vw,450px);border-radius:24px;background:linear-gradient(180deg,rgba(34,22,75,.98),rgba(10,12,38,.98));border:1px solid rgba(197,81,255,.72);box-shadow:0 0 38px rgba(180,79,255,.34),inset 0 0 24px rgba(255,255,255,.06);padding:22px;position:relative}
+    .resolution-close{position:absolute;right:14px;top:12px;border:0;background:rgba(255,255,255,.07);color:white;border-radius:50%;width:38px;height:38px;font-size:24px}.resolution-title{font-size:22px;font-weight:1000;background:linear-gradient(90deg,#2aa8ff,#e14dff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-right:42px}.resolution-sub{margin-top:8px;color:#d8d7ee;font-size:13px;font-weight:850;line-height:1.35}.resolution-text{width:100%;min-height:96px;margin-top:14px;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:14px;color:white;outline:none;resize:vertical;font-size:15px}.resolution-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}.resolution-actions button{border:0;border-radius:16px;padding:14px 12px;font-weight:1000;color:white;font-size:14px}.resolve-btn{background:linear-gradient(90deg,#13c66e,#2aa8ff);box-shadow:0 0 18px rgba(39,220,139,.24)}.escalate-btn{background:linear-gradient(90deg,#ffb132,#b546ff);box-shadow:0 0 18px rgba(255,177,50,.22)}
+
+    .role-grid{display:grid;grid-template-columns:1fr;gap:10px}.role-choice{border:1px solid rgba(129,152,255,.32);border-radius:15px;background:rgba(12,16,42,.42);color:white;padding:13px 12px;text-align:left;font-weight:950;box-shadow:inset 0 0 18px rgba(50,150,255,.06)}.role-choice.active{border-color:#c451ff;box-shadow:0 0 16px rgba(196,81,255,.28),inset 0 0 22px rgba(196,81,255,.12);background:rgba(196,81,255,.12)}.role-small{display:block;margin-top:4px;color:#cfc8ec;font-size:12px;font-weight:800}
 </style>
 </head>
 <body>
@@ -41,6 +77,20 @@
   <div class="success-check" id="successCheck">✅</div>
   <div class="status-flash" id="statusFlash">✅ En cours</div>
   <div class="desc-modal" id="descModal" onclick="if(event.target.id==='descModal')closeDesc()"><div class="desc-card"><button class="desc-close" onclick="closeDesc()">×</button><div class="desc-title" id="descTitle">Description</div><div class="desc-cat" id="descCat"></div><div class="desc-text" id="descText"></div></div></div>
+
+  <div class="resolution-modal" id="resolutionModal" role="dialog" aria-modal="true" aria-labelledby="resolutionTitle">
+    <div class="resolution-card">
+      <button class="resolution-close" id="resolutionClose" aria-label="Fermer">×</button>
+      <div class="resolution-title" id="resolutionTitle">Clôture de l’intervention</div>
+      <div class="resolution-sub" id="resolutionSub">Ajoutez obligatoirement un commentaire avant de choisir l’action.</div>
+      <textarea class="resolution-text" id="resolutionComment" placeholder="Petit texte obligatoire : expliquez ce qui a été fait ou pourquoi il faut transférer..."></textarea>
+      <div class="resolution-actions">
+        <button class="resolve-btn" id="resolutionResolve">✅ Résolu</button>
+        <button class="escalate-btn" id="resolutionEscalate">⬆️ Transférer au supérieur</button>
+      </div>
+    </div>
+  </div>
+
 
   <div class="category-modal" id="categoryModal" role="dialog" aria-modal="true" aria-labelledby="categoryModalTitle">
     <div class="category-box">
@@ -52,6 +102,9 @@
         <button class="category-choice" data-modal-category="Maintenance"><span class="cat-ico">🔧</span><span>Maintenance</span></button>
         <button class="category-choice" data-modal-category="Propreté"><span class="cat-ico">🧹</span><span>Propreté</span></button>
         <button class="category-choice" data-modal-category="Réception"><span class="cat-ico">🛎️</span><span>Réception</span></button>
+        <button class="category-choice" data-modal-category="Responsable maintenance"><span class="cat-ico">🔧</span><span>Resp. maintenance</span></button>
+        <button class="category-choice" data-modal-category="Gouvernante"><span class="cat-ico">🧹</span><span>Gouvernante</span></button>
+        <button class="category-choice" data-modal-category="Responsable réception"><span class="cat-ico">🛎️</span><span>Resp. réception</span></button>
         <button class="category-choice" data-modal-category="Direction"><span class="cat-ico">👔</span><span>Direction</span></button>
       </div>
       <button class="category-cancel" id="categoryCancel">× Annuler</button>
@@ -87,6 +140,20 @@
       <div class="cloud">Menu principal</div>
     </header>
     <div class="app-actions"><div class="session-pill" id="sessionInfo">Non connecté</div><button class="logout-btn" id="logoutBtn">Déconnexion</button></div>
+    <section class="stats" id="homeTaskOverview" style="display:none">
+      <button class="stat totalStat" data-filter="all" style="display:none"><div class="stat-ico">▦</div><div class="stat-label">Total</div><div class="stat-num" id="homeTotalCount">0</div></button>
+      <button class="stat" data-filter="À faire"><div class="stat-ico">▣</div><div class="stat-label">À faire</div><div class="stat-num" id="homeTodoCount">0</div></button>
+      <button class="stat" data-filter="En cours"><div class="stat-ico">⟳</div><div class="stat-label">En cours</div><div class="stat-num" id="homeProgressCount">0</div></button>
+      <button class="stat transferStat" data-filter="Transféré" style="display:none"><div class="stat-ico">⬆️</div><div class="stat-label">Transféré</div><div class="stat-num" id="homeTransferCount">0</div></button>
+      <button class="stat" data-filter="Terminé"><div class="stat-ico">✓</div><div class="stat-label">Terminé</div><div class="stat-num" id="homeDoneCount">0</div></button>
+    </section>
+    <div class="reception-overview-title" id="receptionOverviewTitle">🛎️ Réception</div>
+    <section class="stats reception-row" id="receptionTaskOverview">
+      <button class="stat" data-filter="receptionOwnTodo"><div class="stat-ico">▣</div><div class="stat-label">À faire</div><div class="stat-num" id="receptionTodoCount">0</div></button>
+      <button class="stat" data-filter="receptionOwnProgress"><div class="stat-ico">⟳</div><div class="stat-label">En cours</div><div class="stat-num" id="receptionProgressCount">0</div></button>
+      <button class="stat" data-filter="receptionOwnTransfer"><div class="stat-ico">⬆️</div><div class="stat-label">Transféré</div><div class="stat-num" id="receptionTransferCount">0</div></button>
+      <button class="stat" data-filter="receptionOwnDone"><div class="stat-ico">✓</div><div class="stat-label">Terminé</div><div class="stat-num" id="receptionDoneCount">0</div></button>
+    </section>
     <section class="panel">
       <div class="panel-head"><div class="plus-ring">◇</div><div class="head-text"><div class="title">Choisir une action</div><div class="subtitle">Sélectionnez ce que vous voulez créer.</div></div></div>
       <div class="home-actions">
@@ -108,10 +175,11 @@
     <div class="app-actions">
       <button class="back-home" id="backHomeFromApp">← Retour au menu principal</button>
     </div>
-    <section class="stats">
-      <button class="stat" data-filter="all"><div class="stat-ico">▦</div><div class="stat-label">Total</div><div class="stat-num" id="totalCount">0</div></button>
+    <section class="stats" id="appTaskOverview">
+      <button class="stat totalStat" data-filter="all" style="display:none"><div class="stat-ico">▦</div><div class="stat-label">Total</div><div class="stat-num" id="totalCount">0</div></button>
       <button class="stat" data-filter="À faire"><div class="stat-ico">▣</div><div class="stat-label">À faire</div><div class="stat-num" id="todoCount">0</div></button>
       <button class="stat" data-filter="En cours"><div class="stat-ico">⟳</div><div class="stat-label">En cours</div><div class="stat-num" id="progressCount">0</div></button>
+      <button class="stat transferStat" data-filter="Transféré" style="display:none"><div class="stat-ico">⬆️</div><div class="stat-label">Transféré</div><div class="stat-num" id="transferCount">0</div></button>
       <button class="stat" data-filter="Terminé"><div class="stat-ico">✓</div><div class="stat-label">Terminé</div><div class="stat-num" id="doneCount">0</div></button>
     </section>
     <section class="panel" id="createPanel">
@@ -120,17 +188,32 @@
         <button class="cat-card" data-category="Maintenance"><span class="cat-ico">🔧</span><span>Maintenance</span></button>
         <button class="cat-card" data-category="Propreté"><span class="cat-ico">🧹</span><span>Propreté</span></button>
         <button class="cat-card" data-category="Réception"><span class="cat-ico">🛎️</span><span>Réception</span></button>
+        <button class="cat-card" data-category="Responsable maintenance"><span class="cat-ico">🔧</span><span>Resp. maintenance</span></button>
+        <button class="cat-card" data-category="Gouvernante"><span class="cat-ico">🧹</span><span>Gouvernante</span></button>
+        <button class="cat-card" data-category="Responsable réception"><span class="cat-ico">🛎️</span><span>Resp. réception</span></button>
         <button class="cat-card" data-category="Direction"><span class="cat-ico">👔</span><span>Direction</span></button>
       </div></div>
+      <div class="field"><button class="multi-toggle" id="toggleMultiBtn" type="button">➕ Création multiple <span style="display:block;font-size:12px;color:#e5dfff;margin-top:4px">Coller plusieurs endroits depuis Excel.</span></button></div>
+      <div class="multi-box" id="multiCreateBox">
+        <div class="label">Liste des endroits</div>
+        <textarea id="multiPlaces" placeholder="Ex :
+A12
+B14
+C15
+K01"></textarea>
+        <div class="small-help">Vous pouvez coller une liste Excel, ou séparer les endroits par virgule, point-virgule ou retour à la ligne.</div>
+      </div>
+      <div class="field" id="singleEndroitField"><div class="label">Endroit</div><input id="endroit" placeholder="Ex : A22, M02, piscine, restaurant..." /></div>
+      <div class="field"><div class="label">Date d’apparition</div><div class="schedule-grid"><input id="scheduleDate" type="date" /><input id="scheduleTime" type="time" value="07:00" /></div><div class="small-help">Si aucune date n’est saisie, l’intervention apparaît immédiatement. L’heure par défaut est 07h00.</div></div>
       <div class="field"><div class="label">Titre de la tâche</div><input id="title" placeholder="Ex : Vérifier la climatisation du cottage M02" /></div>
       <div class="field"><div class="label">Description</div><textarea id="description" placeholder="Décrivez clairement l'action à réaliser..."></textarea></div>
       <div class="field"><div class="label">Priorité</div><div class="priority"><button class="pill active" data-priority="Normal">Normal</button><button class="pill" data-priority="Important">Important</button><button class="pill" data-priority="Urgent">Urgent</button></div></div>
-      <div class="field"><div class="label">Catégories à notifier</div><div class="select-wrap"><select id="category"><option value="" selected>Choisir une catégorie</option><option>Maintenance</option><option>Propreté</option><option>Réception</option><option>Direction</option></select></div></div>
+      <div class="field"><div class="label">Catégories à notifier</div><div class="select-wrap"><select id="category"><option value="" selected>Choisir une catégorie</option><option>Maintenance</option><option>Propreté</option><option>Réception</option><option>Responsable maintenance</option><option>Gouvernante</option><option>Responsable réception</option><option>Direction</option></select></div></div>
       <button class="cta" id="createBtn">CRÉER ET NOTIFIER</button>
     </section>
     <section class="panel" id="listPanel" style="display:none">
       <div class="list-head"><button class="icon-btn" id="backCreate">←</button><div class="list-center"><div class="view-title" id="listTitle">TOTAL</div><div class="subtitle" id="listSub">Toutes les interventions</div></div><button class="icon-btn" id="closeList">×</button></div>
-      <div class="search-row"><input id="search" placeholder="Rechercher..." /><button class="filter-btn">⌁</button></div>
+      <div class="search-row"><div class="search-wrap"><input id="search" placeholder="Rechercher..." /><button class="clear-search-btn" id="clearSearch" type="button" aria-label="Effacer la recherche">×</button></div><button class="filter-btn">⌁</button></div>
       <div id="taskList"></div>
     </section>
     <div class="bottom-space"></div>
@@ -144,12 +227,25 @@
       <div class="cloud">Rapport Direction</div>
     </header>
     <button class="back-home" id="backHomeFromReport">← Retour au menu principal</button>
+    <section class="panel" id="directionDashboardPanel">
+      <div class="panel-head"><div class="plus-ring">📊</div><div class="head-text"><div class="title">Tableau Direction</div><div class="subtitle">Vue synthèse Maintenance / Propreté.</div></div></div>
+      <div id="directionDashboard" class="direction-dashboard"></div>
+    </section>
     <section class="panel">
       <div class="panel-head"><div class="plus-ring">▤</div><div class="head-text"><div class="title">Extraire pour rapport</div><div class="subtitle">Exports réservés à la Direction.</div></div></div>
       <div class="app-actions">
         <button class="export-btn" id="exportCsvBtn">📊 Exporter CSV</button>
         <button class="export-btn" id="exportXlsxBtn">📈 Exporter Excel XLSX</button>
       </div>
+    </section>
+    <section class="panel" id="timeReportPanel">
+      <div class="panel-head"><div class="plus-ring">⏱️</div><div class="head-text"><div class="title">Temps de traitement</div><div class="subtitle">Visible uniquement par la Direction.</div></div></div>
+      <div class="period-row">
+        <div><div class="period-label">Date début</div><input id="timeDateStart" type="date" /></div>
+        <div><div class="period-label">Date fin</div><input id="timeDateEnd" type="date" /></div>
+      </div>
+      <div class="search-row"><div class="search-wrap"><input id="timeSearch" placeholder="Rechercher une intervention..." /><button class="clear-search-btn" id="clearTimeSearch" type="button" aria-label="Effacer la recherche">×</button></div><button class="filter-btn">⌁</button></div>
+      <div id="timeStatsContent"><div class="time-empty">Aucune donnée terminée pour le moment.</div></div>
     </section>
     <div class="bottom-space"></div>
   </main>
@@ -165,18 +261,25 @@
     <section class="panel" id="userMenuPanel">
       <div class="panel-head"><div class="plus-ring">♙</div><div class="head-text"><div class="title">Utilisateurs</div><div class="subtitle">Créez, modifiez ou supprimez les accès de l’équipe.</div></div></div>
       <div class="user-choice">
-        <button class="user-choice-btn" id="openCreateUser">＋ Création d’un utilisateur<span>Ajouter un prénom, une catégorie et un code PIN.</span></button>
+        <button class="user-choice-btn" id="openCreateUser">＋ Création d’un utilisateur<span>Ajouter un prénom, une catégorie, un rôle et un code PIN.</span></button>
         <button class="user-choice-btn" id="openManageUsers">⚙ Modifier un utilisateur<span>Modifier les informations ou supprimer un utilisateur existant.</span></button>
       </div>
     </section>
     <section class="panel user-subpage" id="createUserSection">
-      <div class="list-head"><button class="icon-btn" id="backUserMenu1">←</button><div class="list-center"><div class="view-title">Créer un utilisateur</div><div class="subtitle">Renseignez le prénom, la catégorie affectée et un code PIN simple.</div></div><span></span></div>
+      <div class="list-head"><button class="icon-btn" id="backUserMenu1">←</button><div class="list-center"><div class="view-title">Créer un utilisateur</div><div class="subtitle">Renseignez le prénom, la catégorie affectée, le rôle et un code PIN simple.</div></div><span></span></div>
       <div class="field"><div class="label">Prénom</div><input id="userFirstName" placeholder="Ex : Lucas" /></div>
       <div class="field"><div class="label">Catégorie affectée</div><div class="user-category-grid" id="userCategoryCards">
         <button class="cat-card" data-user-category="Maintenance"><span class="cat-ico">🔧</span><span>Maintenance</span></button>
         <button class="cat-card" data-user-category="Propreté"><span class="cat-ico">🧹</span><span>Propreté</span></button>
         <button class="cat-card" data-user-category="Réception"><span class="cat-ico">🛎️</span><span>Réception</span></button>
         <button class="cat-card" data-user-category="Direction"><span class="cat-ico">👔</span><span>Direction</span></button>
+      </div></div>
+      <div class="field"><div class="label">Fonction / rôle</div><div class="role-grid" id="userRoleCards">
+        <button class="role-choice active" data-user-role="Utilisateur">Utilisateur<span class="role-small">Accès standard selon sa catégorie.</span></button>
+        <button class="role-choice" data-user-role="Responsable maintenance">Responsable maintenance<span class="role-small">Peut créer aussi pour Direction.</span></button>
+        <button class="role-choice" data-user-role="Responsable réception">Responsable réception<span class="role-small">Peut créer aussi pour Direction.</span></button>
+        <button class="role-choice" data-user-role="Gouvernante">Gouvernante<span class="role-small">Peut créer aussi pour Direction.</span></button>
+        <button class="role-choice" data-user-role="Direction">Direction<span class="role-small">Accès complet + rapports.</span></button>
       </div></div>
       <div class="field"><div class="label">Code PIN</div><input id="userPin" inputmode="numeric" autocomplete="off" placeholder="Ex : 1234" /></div>
       <button class="cta" id="createUserBtn">CRÉER L’UTILISATEUR</button>
@@ -194,28 +297,126 @@
   const key='relais_ia_tasks_v10_1';
   const usersKey='relais_ia_users_v10_6';
   const currentUserKey='relais_ia_current_user_v11';
-  let tasks=[], users=[], currentUser=null, cloud=false, db=null, fb=null, priority='Normal', selectedCategory='', currentFilter='all', pendingCreateAfterCategory=false, pendingCreateUserAfterCategory=false, selectedUserCategory='';
-  const icons={Maintenance:'🔧',Propreté:'🧹',Réception:'🛎️',Direction:'👔','Toutes les catégories':'▦'};
+  let tasks=[], users=[], currentUser=null, cloud=false, db=null, fb=null, priority='Normal', selectedCategory='', currentFilter='all', pendingCreateAfterCategory=false, pendingCreateUserAfterCategory=false, selectedUserCategory='', selectedUserRole='Utilisateur', multiMode=false;
+  const icons={Maintenance:'🔧',Propreté:'🧹',Réception:'🛎️',Direction:'👔','Responsable maintenance':'🔧',Gouvernante:'🧹','Responsable réception':'🛎️','Toutes les catégories':'▦'};
   function normalizeText(v){return String(v||'').trim().toLowerCase()}
-  function getAllowedCategories(){
-    const role=currentUser?.category;
-    if(role==='Direction')return ['Maintenance','Propreté','Réception','Direction'];
-    if(role==='Réception')return ['Maintenance','Propreté','Réception'];
-    if(role==='Maintenance')return ['Maintenance'];
-    if(role==='Propreté')return ['Propreté'];
+  function normalizeSearchValue(v){return String(v||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[\s\-_]+/g,'')}
+  function buildSearchHaystack(t){
+    const history=Array.isArray(t.transferHistory)?t.transferHistory.map(h=>[h.by,h.from,h.to,h.comment,fmt(h.at)].join(' ')).join(' '):'';
+    return [t.title,t.endroit,t.lieu,t.location,t.description,t.category,t.createdBy,t.handledBy,t.completedBy,t.priority,t.status,t.transferredTo,t.transferredBy,t.transferTo,t.transferBy,t.resolutionComment,history,fmt(t.createdAt),fmt(t.handledAt),fmt(t.completedAt)].join(' ');
+  }
+  function matchesSmartSearch(t,q){
+    const raw=String(q||'').toLowerCase().trim();
+    if(!raw)return true;
+    const hay=buildSearchHaystack(t).toLowerCase();
+    if(hay.includes(raw))return true;
+    return normalizeSearchValue(hay).includes(normalizeSearchValue(raw));
+  }
+  function getUserRole(u=currentUser){return u?.role || (u?.category==='Direction'?'Direction':'Utilisateur')}
+  function getCreateCategories(){
+    const role=getUserRole();
+    const cat=currentUser?.category;
+    if(role==='Direction')return ['Responsable maintenance','Gouvernante','Responsable réception'];
+    if(role==='Responsable maintenance')return ['Maintenance','Propreté','Réception','Responsable maintenance','Direction'];
+    if(role==='Gouvernante')return ['Maintenance','Propreté','Réception','Gouvernante','Direction'];
+    if(role==='Responsable réception')return ['Maintenance','Propreté','Réception','Gouvernante','Responsable réception','Direction'];
+    if(cat==='Maintenance')return ['Maintenance','Propreté','Réception','Responsable maintenance'];
+    if(cat==='Propreté')return ['Maintenance','Propreté','Réception','Gouvernante'];
+    if(cat==='Réception')return ['Maintenance','Propreté','Réception','Responsable réception'];
+    if(cat==='Direction')return ['Responsable maintenance','Gouvernante','Responsable réception'];
+    return ['Maintenance','Propreté','Réception'];
+  }
+  function getVisibleCategories(){
+    const role=getUserRole();
+    const cat=currentUser?.category;
+    if(role==='Direction')return ['Maintenance','Propreté','Réception','Direction','Responsable maintenance','Gouvernante','Responsable réception'];
+    if(role==='Responsable maintenance')return ['Maintenance','Responsable maintenance'];
+    if(role==='Gouvernante')return ['Propreté','Gouvernante'];
+    if(role==='Responsable réception')return ['Réception','Responsable réception'];
+    if(cat==='Réception')return ['Réception'];
+    if(cat==='Maintenance')return ['Maintenance'];
+    if(cat==='Propreté')return ['Propreté'];
+    if(cat==='Direction')return ['Maintenance','Propreté','Réception','Direction','Responsable maintenance','Gouvernante','Responsable réception'];
     return [];
   }
-  function canManageUsers(){return ['Direction','Réception'].includes(currentUser?.category)}
-  function canAccessReports(){return currentUser?.category==='Direction'}
-  function canSeeTask(t){const allowed=getAllowedCategories();return allowed.includes(t.category||'')}
-  function visibleTasks(){return tasks.filter(canSeeTask)}
+  function getAllowedCategories(){return getCreateCategories()}
+  function canManageUsers(){const role=getUserRole();return role==='Direction'||role==='Responsable réception'||currentUser?.category==='Direction'}
+  function canAccessReports(){return currentUser?.category==='Direction' || getUserRole()==='Direction'}
+
+  function getSuperiorCategory(){
+    const role=getUserRole();
+    const cat=currentUser?.category;
+    if(role==='Responsable maintenance')return 'Direction';
+    if(role==='Responsable réception')return 'Direction';
+    if(role==='Gouvernante')return 'Direction';
+    if(role==='Direction'||cat==='Direction')return '';
+    if(cat==='Maintenance')return 'Responsable maintenance';
+    if(cat==='Réception')return 'Responsable réception';
+    if(cat==='Propreté')return 'Gouvernante';
+    return '';
+  }
+  function canSeeTask(t){const allowed=getVisibleCategories();return allowed.includes(t.category||'')}
+  function canSeeAllInProgress(){const role=getUserRole();const cat=currentUser?.category;return role==='Direction'||cat==='Direction'||cat==='Réception'||role==='Responsable réception'}
+  function canSeeGlobalTaskView(){const role=getUserRole();const cat=currentUser?.category;return role==='Direction'||cat==='Direction'||role==='Responsable réception'}
+  function isTaskVisibleNow(t){
+    const raw=t.scheduledAt||t.visibleAt||t.appearanceAt||null;
+    if(!raw)return true;
+    const d=toDateObj(raw);
+    if(!d||isNaN(d))return true;
+    return d.getTime()<=Date.now();
+  }
+  function allOperationalTasks(){return tasks.filter(t=>isTaskVisibleNow(t)&&['Maintenance','Propreté','Réception','Direction','Responsable maintenance','Gouvernante','Responsable réception'].includes(t.category||''))}
+  function isSimpleReception(){return currentUser?.category==='Réception' && getUserRole()==='Utilisateur'}
+  function isSimpleProprete(){return currentUser?.category==='Propreté' && getUserRole()==='Utilisateur'}
+  function isSimpleMaintenance(){return currentUser?.category==='Maintenance' && getUserRole()==='Utilisateur'}
+  function receptionOpsTasks(){return tasks.filter(t=>['Maintenance','Propreté'].includes(t.category||''))}
+  function receptionOwnTasks(){return tasks.filter(t=>(t.category||'')==='Réception')}
+  function canActOnTask(t){return !(isSimpleReception() && (t.category||'')!=='Réception')}
+  function canSeeTransferred(){const role=getUserRole();const cat=currentUser?.category;return ['Direction','Responsable maintenance','Responsable réception','Gouvernante'].includes(role)||cat==='Direction'||isSimpleReception()}
+  function isTransferredTask(t){return !!(t.transferredTo||t.transferredBy) && (t.status||'À faire')!=='Terminé'}
+  function visibleTasks(){return tasks.filter(t=>isTaskVisibleNow(t)&&canSeeTask(t))}
   function loadCurrentUser(){try{currentUser=JSON.parse(localStorage.getItem(currentUserKey)||'null')}catch(e){currentUser=null}}
   function saveCurrentUser(){if(currentUser)localStorage.setItem(currentUserKey,JSON.stringify(currentUser));else localStorage.removeItem(currentUserKey)}
   function updateSessionUi(){
-    if($('sessionInfo'))$('sessionInfo').textContent=currentUser?`${currentUser.firstName||'Utilisateur'} · ${icons[currentUser.category]||'▦'} ${currentUser.category||''}`:'Non connecté';
+    if($('sessionInfo'))$('sessionInfo').textContent=currentUser?`${currentUser.firstName||'Utilisateur'} · ${icons[currentUser.category]||'▦'} ${currentUser.category||''} · ${getUserRole()}`:'Non connecté';
     if($('goUser'))$('goUser').classList.toggle('hidden-access',!canManageUsers());
     if($('goReport'))$('goReport').classList.toggle('hidden-access',!canAccessReports());
+    const overviewRoles=['Maintenance','Responsable maintenance','Propreté','Gouvernante','Réception','Responsable réception','Direction'];
+    const showOverview=currentUser && (overviewRoles.includes(getUserRole()) || overviewRoles.includes(currentUser.category));
+    if($('homeTaskOverview')){
+      $('homeTaskOverview').style.display=showOverview?'grid':'none';
+      $('homeTaskOverview').classList.toggle('proprete-main',isSimpleProprete());
+      $('homeTaskOverview').classList.toggle('maintenance-main',isSimpleMaintenance());
+    }
+    if($('appTaskOverview')){
+      $('appTaskOverview').classList.toggle('proprete-main',isSimpleProprete());
+      $('appTaskOverview').classList.toggle('maintenance-main',isSimpleMaintenance());
+    }
+    if($('receptionTaskOverview'))$('receptionTaskOverview').classList.toggle('show',isSimpleReception());
+    if($('receptionOverviewTitle'))$('receptionOverviewTitle').classList.toggle('show',isSimpleReception());
+    // Important : remettre toujours les filtres standards avant d’appliquer le cas Réception.
+    // Cela évite qu’un ancien filtre global Réception reste actif après changement d’utilisateur.
+    const defaultHomeFilters={"À faire":"À faire","En cours":"En cours","Transféré":"Transféré","Terminé":"Terminé"};
+    document.querySelectorAll('#homeTaskOverview .stat').forEach(b=>{
+      const label=(b.querySelector('.stat-label')?.textContent||'').trim();
+      if(defaultHomeFilters[label])b.dataset.filter=defaultHomeFilters[label];
+    });
+    if(isSimpleReception()){
+      const map={"À faire":"receptionAllTodo","En cours":"receptionAllProgress","Transféré":"receptionAllTransfer","Terminé":"receptionAllDone"};
+      document.querySelectorAll('#homeTaskOverview .stat').forEach(b=>{const label=(b.querySelector('.stat-label')?.textContent||'').trim();if(map[label])b.dataset.filter=map[label]});
+    }
+    if(isSimpleProprete()){
+      const map={"À faire":"simplePropreteTodo","En cours":"simplePropreteProgress","Transféré":"simplePropreteTransfer","Terminé":"simplePropreteDone"};
+      document.querySelectorAll('#homeTaskOverview .stat,#appTaskOverview .stat').forEach(b=>{const label=(b.querySelector('.stat-label')?.textContent||'').trim();if(map[label])b.dataset.filter=map[label]});
+    }
+    if(isSimpleMaintenance()){
+      const map={"À faire":"simpleMaintenanceTodo","En cours":"simpleMaintenanceProgress","Transféré":"simpleMaintenanceTransfer","Terminé":"simpleMaintenanceDone"};
+      document.querySelectorAll('#homeTaskOverview .stat,#appTaskOverview .stat').forEach(b=>{const label=(b.querySelector('.stat-label')?.textContent||'').trim();if(map[label])b.dataset.filter=map[label]});
+    }
+    document.querySelectorAll('.transferStat').forEach(el=>el.style.display=canSeeTransferred()?'flex':'none');
+    document.querySelectorAll('.totalStat').forEach(el=>el.style.display='none');
     refreshCategoryAccess();
+    setCounts();
   }
   function refreshCategoryAccess(){
     const allowed=getAllowedCategories();
@@ -239,7 +440,7 @@
     const pin=String($('loginPin')?.value||'').trim();
     const u=users.find(x=>normalizeText(x.firstName)===first && String(x.pin||'').trim()===pin);
     if(!u){$('loginError')?.classList.add('show');return}
-    currentUser={id:u.id,firstName:u.firstName,category:u.category,pin:u.pin};
+    currentUser={id:u.id,firstName:u.firstName,category:u.category,role:getUserRole(u),pin:u.pin};
     saveCurrentUser();
     $('loginError')?.classList.remove('show');
     showCenterPopup('✅ Connecté','done');
@@ -253,7 +454,30 @@
   const showStatusFlash=(next)=>{const el=$('statusFlash');el.textContent=next==='Terminé'?'✅ Terminé':(next==='À faire'?'✅ À faire':'✅ En cours');el.className='status-flash show '+(next==='Terminé'?'done':(next==='À faire'?'todo':'progress'));setTimeout(()=>el.classList.remove('show'),850)};
   const showCenterPopup=(text,type='progress')=>{const el=$('statusFlash');el.textContent=text;el.className='status-flash show '+type;setTimeout(()=>el.classList.remove('show'),950)};
   window.closeDesc=()=>{$('descModal').classList.remove('show')};
-  window.showDesc=(id)=>{const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return; $('descTitle').textContent=t.title||'Description'; $('descCat').innerHTML=`${icons[t.category]||'▦'} ${esc(t.category||'Toutes les catégories')}`; const txt=(t.description||'').trim(); $('descText').innerHTML=txt?esc(txt):'<span class="desc-empty">Aucune description renseignée.</span>'; $('descModal').classList.add('show')};
+  window.showDesc=(id)=>{
+    const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return;
+    $('descTitle').textContent=t.title||'Description';
+    $('descCat').innerHTML=`${icons[t.category]||'▦'} ${esc(t.category||'Toutes les catégories')}`;
+    const initial=(t.description||'').trim();
+    const place=(t.endroit||t.lieu||t.location||'').trim();
+    const placeLine=place?`<div class="desc-meta-line">📍 Endroit : <strong>${esc(place)}</strong></div>`:'';
+    const scheduledLine=(t.scheduledAt||t.visibleAt)?`<div class="desc-meta-line">🕖 Apparition programmée : <strong>${fmt(t.scheduledAt||t.visibleAt)}</strong></div>`:'';
+    const createdBlock=`<div class="desc-section blue"><div class="desc-section-title">🔵 Description initiale</div>${placeLine}${scheduledLine}<div class="desc-comment">${initial?esc(initial):'<span class="desc-empty">Aucune description renseignée.</span>'}</div><div class="desc-meta-line">👤 Créé par : ${esc(t.createdBy||'Utilisateur')}</div><div class="desc-meta-line">📅 ${fmt(t.createdAt)}</div></div>`;
+    let transferBlocks='';
+    const history=Array.isArray(t.transferHistory)?t.transferHistory:[];
+    const effectiveHistory=history.length?history:((t.transferComment||t.transferredBy||t.transferredTo)?[{by:t.transferredBy||'',from:t.transferredFrom||'',to:t.transferredTo||'',comment:t.transferComment||'',at:t.transferredAt||t.updatedAt}]:[]);
+    transferBlocks=effectiveHistory.map((h,i)=>{
+      const color=(h.to==='Direction')?'purple':'orange';
+      const label=(h.to==='Direction')?'🟣 Transfert vers Direction':`🟠 Transfert n°${i+1}`;
+      const hComment=(h.comment||h.transferComment||h.commentaire||h.text||h.message||h.note||h.description||((i===effectiveHistory.length-1)?(t.transferComment||''):'')||'').trim();
+      return `<div class="desc-section ${color}"><div class="desc-section-title">${label}</div><div class="desc-comment">${hComment?esc(hComment):'<span class="desc-empty">Aucun commentaire de transfert renseigné.</span>'}</div><div class="desc-meta-line">👤 Transféré par : ${esc(h.by||'Utilisateur')}</div><div class="desc-meta-line">➡️ Transféré à : ${esc(h.to||'Supérieur')}</div><div class="desc-meta-line">📅 ${fmt(h.at)}</div></div>`;
+    }).join('');
+    const totalResolutionMinutes=(t.createdAt&&t.completedAt)?minutesBetween(t.createdAt,t.completedAt):null;
+    const totalResolutionLine=(totalResolutionMinutes!==null)?`<div class="desc-meta-line">⏱️ Temps total : <strong>${formatDuration(totalResolutionMinutes)}</strong></div>`:'';
+    const resolutionBlock=(t.resolutionComment||t.completedBy||t.completedAt)?`<div class="desc-section green"><div class="desc-section-title">🟢 Résolution finale</div><div class="desc-comment">${t.resolutionComment?esc(t.resolutionComment):'<span class="desc-empty">Aucun commentaire de résolution renseigné.</span>'}</div><div class="desc-meta-line">👤 Terminé par : ${esc(t.completedBy||'Utilisateur')}</div><div class="desc-meta-line">📅 ${fmt(t.completedAt||t.updatedAt)}</div>${totalResolutionLine}</div>`:'';
+    $('descText').innerHTML=createdBlock+transferBlocks+resolutionBlock;
+    $('descModal').classList.add('show')
+  };
   const showCategoryModal=(mode='task')=>{pendingCreateAfterCategory=mode==='task';pendingCreateUserAfterCategory=mode==='user';if(mode==='user'){$('userCategoryCards').classList.add('error')}else{$('categoryCards').classList.add('error')}refreshCategoryAccess();$('categoryModal').classList.add('show')};
   const hideCategoryModal=()=>{$('categoryModal').classList.remove('show')};
   const chooseCategoryFromModal=(cat)=>{if(pendingCreateUserAfterCategory){selectedUserCategory=cat;$('userCategoryCards').classList.remove('error');document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.toggle('active',x.dataset.userCategory===cat));hideCategoryModal();pendingCreateUserAfterCategory=false;setTimeout(()=>createUser(),80);return}if(!getAllowedCategories().includes(cat)){toast('Accès non autorisé pour cette catégorie.');return}selectedCategory=cat;$('category').value=cat;$('categoryCards').classList.remove('error');document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===cat));hideCategoryModal();if(pendingCreateAfterCategory){pendingCreateAfterCategory=false;setTimeout(()=>createTask(),80)}};
@@ -261,16 +485,51 @@
   const fmt=v=>{try{if(v?.toDate)return v.toDate().toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});return v?new Date(v).toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'À l’instant'}catch(e){return 'À l’instant'}};
   const toDateObj=v=>{try{if(v?.toDate)return v.toDate(); if(v)return new Date(v); return new Date()}catch(e){return new Date()}};
   const cleanCell=v=>String(v??'').replace(/\s+/g,' ').trim();
+  function getLatestTransfer(t){
+    const h=Array.isArray(t.transferHistory)?t.transferHistory:[];
+    return h.length?h[h.length-1]:null;
+  }
+  function getTransferSummary(t){
+    const h=Array.isArray(t.transferHistory)?t.transferHistory:[];
+    if(!h.length)return '';
+    return h.map((x,i)=>{const c=x.comment||x.transferComment||x.commentaire||x.text||x.message||x.note||x.description||'';return `Transfert ${i+1} : ${x.by||''} → ${x.to||''} - ${fmt(x.at)} - ${c}`}).join(' | ');
+  }
   function getExportRows(){
-    return visibleTasks().map(t=>{
-      const d=toDateObj(t.createdAt);
+    const source=(canAccessReports&&canAccessReports())?allOperationalTasks():visibleTasks();
+    return source.map(t=>{
+      const created=toDateObj(t.createdAt);
+      const handled=t.handledAt?toDateObj(t.handledAt):null;
+      const completed=t.completedAt?toDateObj(t.completedAt):null;
+      const latest=getLatestTransfer(t);
+      const total=(t.createdAt&&t.completedAt)?minutesBetween(t.createdAt,t.completedAt):null;
+      const take=(t.createdAt&&t.handledAt)?minutesBetween(t.createdAt,t.handledAt):null;
+      const work=((t.handledAt||t.createdAt)&&t.completedAt)?minutesBetween(t.handledAt||t.createdAt,t.completedAt):null;
       return {
         title:cleanCell(t.title||''),
         description:cleanCell(t.description||''),
-        date:d.toLocaleDateString('fr-FR'),
-        time:d.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}),
-        user:cleanCell(t.createdBy||'Utilisateur'),
-        status:cleanCell(t.status||'À faire')
+        endroit:cleanCell(t.endroit||t.lieu||t.location||''),
+        category:cleanCell(t.category||''),
+        priority:cleanCell(t.priority||'Normal'),
+        date:created.toLocaleDateString('fr-FR'),
+        time:created.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}),
+        createdBy:cleanCell(t.createdBy||'Utilisateur'),
+        status:cleanCell(t.status||'À faire'),
+        handledBy:cleanCell(t.handledBy||''),
+        handledDate:handled?handled.toLocaleDateString('fr-FR'):'',
+        handledTime:handled?handled.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}):'',
+        transferredBy:cleanCell((latest&&latest.by)||t.transferBy||''),
+        transferredTo:cleanCell((latest&&latest.to)||t.transferTo||''),
+        transferComment:cleanCell((latest&&(latest.comment||latest.transferComment||latest.commentaire||latest.text||latest.message||latest.note||latest.description))||t.transferComment||''),
+        transferDate:latest?.at?toDateObj(latest.at).toLocaleDateString('fr-FR'):'',
+        transferTime:latest?.at?toDateObj(latest.at).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}):'',
+        transferHistory:cleanCell(getTransferSummary(t)),
+        completedBy:cleanCell(t.completedBy||''),
+        completedDate:completed?completed.toLocaleDateString('fr-FR'):'',
+        completedTime:completed?completed.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}):'',
+        resolutionComment:cleanCell(t.resolutionComment||''),
+        timeToTake:take!==null?formatDuration(take):'',
+        workTime:work!==null?formatDuration(work):'',
+        totalTime:total!==null?formatDuration(total):''
       };
     });
   }
@@ -281,10 +540,27 @@
     document.body.appendChild(a);a.click();a.remove();
     setTimeout(()=>URL.revokeObjectURL(a.href),1500);
   }
+  function openFileChooserOrDownload(blob,filename){
+    const mime=blob.type||'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    try{
+      const file=new File([blob],filename,{type:mime});
+      if(navigator.canShare&&navigator.canShare({files:[file]})&&navigator.share){
+        navigator.share({files:[file],title:'Relais IA',text:'Exporter le fichier Relais IA'}).catch(()=>{
+          downloadBlob(blob,filename);
+          toast('Ouverture annulée : fichier téléchargé.');
+        });
+        toast('Choisissez l’application pour ouvrir le fichier.');
+        return;
+      }
+    }catch(e){console.warn(e)}
+    downloadBlob(blob,filename);
+    toast('Fichier téléchargé. Ouvrez-le depuis Téléchargements.');
+  }
   function exportInterventionsCsv(){
-    if(!visibleTasks().length){toast('Aucune intervention à exporter.');return}
-    const headers=['Titre de tâche','Description','Date de création','Heure de création','Utilisateur','Statut'];
-    const rows=getExportRows().map(r=>[r.title,r.description,r.date,r.time,r.user,r.status]);
+    const exportRows=getExportRows();
+    if(!exportRows.length){toast('Aucune intervention à exporter.');return}
+    const headers=['Titre de tâche','Endroit','Description','Catégorie','Priorité','Date de création','Heure de création','Créé par','Statut','Pris en charge par','Date prise en charge','Heure prise en charge','Transféré par','Transféré à','Commentaire transfert','Date transfert','Heure transfert','Historique transferts','Terminé par','Date terminé','Heure terminé','Commentaire résolution','Temps avant prise en charge','Temps de traitement','Temps total'];
+    const rows=exportRows.map(r=>[r.title,r.endroit,r.description,r.category,r.priority,r.date,r.time,r.createdBy,r.status,r.handledBy,r.handledDate,r.handledTime,r.transferredBy,r.transferredTo,r.transferComment,r.transferDate,r.transferTime,r.transferHistory,r.completedBy,r.completedDate,r.completedTime,r.resolutionComment,r.timeToTake,r.workTime,r.totalTime]);
     const csv=[headers,...rows].map(row=>row.map(cell=>'"'+String(cell).replace(/"/g,'""')+'"').join(';')).join('\r\n');
     const stamp=new Date().toISOString().slice(0,10);
     downloadBlob(new Blob(['\ufeff',csv],{type:'text/csv;charset=utf-8;'}),`interventions-relais-ia-${stamp}.csv`);
@@ -310,34 +586,444 @@
   }
   function xmlEsc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[m]))}
   function cell(col,row,value){return `<c r="${col}${row}" t="inlineStr"><is><t>${xmlEsc(value)}</t></is></c>`}
+  function dateKeyFr(d){return d?d.toLocaleDateString('fr-FR'):''}
+  function getDailyStatsRows(){
+    const rows={};
+    allOperationalTasks().forEach(t=>{
+      const d=toDateObj(t.completedAt||t.createdAt);
+      if(!d||isNaN(d))return;
+      const key=dateKeyFr(d);
+      if(!rows[key])rows[key]={date:key,maintCount:0,cleanCount:0,maintMin:0,cleanMin:0};
+      const total=minutesBetween(t.createdAt,t.completedAt);
+      if(isMaintCat(t.category)){rows[key].maintCount++; if(total!==null)rows[key].maintMin+=total;}
+      if(isCleanCat(t.category)){rows[key].cleanCount++; if(total!==null)rows[key].cleanMin+=total;}
+    });
+    return Object.values(rows).sort((a,b)=>{
+      const [da,ma,ya]=a.date.split('/').map(Number), [db,mb,yb]=b.date.split('/').map(Number);
+      return new Date(ya,ma-1,da)-new Date(yb,mb-1,db);
+    }).map(r=>[r.date,r.maintCount,r.cleanCount,formatDuration(r.maintMin),formatDuration(r.cleanMin)]);
+  }
+  function getPerformanceRows(){
+    const groups={};
+    allOperationalTasks().forEach(t=>{
+      const cat=t.category||'Sans catégorie';
+      if(!groups[cat])groups[cat]=[];
+      const total=minutesBetween(t.createdAt,t.completedAt);
+      if(total!==null)groups[cat].push(total);
+    });
+    return Object.keys(groups).sort().map(cat=>[cat,groups[cat].length,formatDuration(average(groups[cat]))]);
+  }
+  function buildSheetXml(headers,rows,widths=''){
+    const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+    const sheetRows=[headers,...rows].map((row,i)=>`<row r="${i+1}">${row.map((v,j)=>cell(letters[j],i+1,v)).join('')}</row>`).join('');
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${widths}<sheetData>${sheetRows}</sheetData></worksheet>`;
+  }
+
   function exportInterventionsXlsx(){
-    if(!visibleTasks().length){toast('Aucune intervention à exporter.');return}
-    const headers=['Titre de tâche','Description','Date de création','Heure de création','Utilisateur','Statut'];
-    const rows=getExportRows().map(r=>[r.title,r.description,r.date,r.time,r.user,r.status]);
-    const cols=['A','B','C','D','E','F'];
-    const sheetRows=[headers,...rows].map((row,i)=>`<row r="${i+1}">${row.map((v,j)=>cell(cols[j],i+1,v)).join('')}</row>`).join('');
-    const sheet=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><cols><col min="1" max="1" width="28" customWidth="1"/><col min="2" max="2" width="45" customWidth="1"/><col min="3" max="6" width="18" customWidth="1"/></cols><sheetData>${sheetRows}</sheetData></worksheet>`;
+    const exportRows=getExportRows();
+    if(!exportRows.length){toast('Aucune intervention à exporter.');return}
+    const headers=['Titre de tâche','Endroit','Description','Catégorie','Priorité','Date de création','Heure de création','Créé par','Statut','Pris en charge par','Date prise en charge','Heure prise en charge','Transféré par','Transféré à','Commentaire transfert','Date transfert','Heure transfert','Historique transferts','Terminé par','Date terminé','Heure terminé','Commentaire résolution','Temps avant prise en charge','Temps de traitement','Temps total'];
+    const rows=exportRows.map(r=>[r.title,r.endroit,r.description,r.category,r.priority,r.date,r.time,r.createdBy,r.status,r.handledBy,r.handledDate,r.handledTime,r.transferredBy,r.transferredTo,r.transferComment,r.transferDate,r.transferTime,r.transferHistory,r.completedBy,r.completedDate,r.completedTime,r.resolutionComment,r.timeToTake,r.workTime,r.totalTime]);
+    const sheet1=buildSheetXml(headers,rows,'<cols><col min="1" max="1" width="28" customWidth="1"/><col min="2" max="2" width="48" customWidth="1"/><col min="3" max="8" width="20" customWidth="1"/><col min="9" max="21" width="24" customWidth="1"/><col min="22" max="24" width="18" customWidth="1"/></cols>');
+    const dailyHeaders=['Date','Nb interventions Maintenance','Nb interventions Propreté','Temps total Maintenance','Temps total Propreté'];
+    const sheet2=buildSheetXml(dailyHeaders,getDailyStatsRows(),'<cols><col min="1" max="1" width="16" customWidth="1"/><col min="2" max="5" width="26" customWidth="1"/></cols>');
+    const perfHeaders=['Service','Interventions terminées','Temps moyen'];
+    const sheet3=buildSheetXml(perfHeaders,getPerformanceRows(),'<cols><col min="1" max="1" width="28" customWidth="1"/><col min="2" max="3" width="22" customWidth="1"/></cols>');
     const files=[
-      {name:'[Content_Types].xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'},
+      {name:'[Content_Types].xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/worksheets/sheet3.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'},
       {name:'_rels/.rels',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'},
-      {name:'xl/workbook.xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Interventions" sheetId="1" r:id="rId1"/></sheets></workbook>'},
-      {name:'xl/_rels/workbook.xml.rels',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>'},
-      {name:'xl/worksheets/sheet1.xml',content:sheet}
+      {name:'xl/workbook.xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Interventions" sheetId="1" r:id="rId1"/><sheet name="Stats journalières" sheetId="2" r:id="rId2"/><sheet name="Performance services" sheetId="3" r:id="rId3"/></sheets></workbook>'},
+      {name:'xl/_rels/workbook.xml.rels',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet3.xml"/></Relationships>'},
+      {name:'xl/worksheets/sheet1.xml',content:sheet1},
+      {name:'xl/worksheets/sheet2.xml',content:sheet2},
+      {name:'xl/worksheets/sheet3.xml',content:sheet3}
     ];
     const stamp=new Date().toISOString().slice(0,10);
-    downloadBlob(makeZip(files),`interventions-relais-ia-${stamp}.xlsx`);
+    openFileChooserOrDownload(makeZip(files),`interventions-relais-ia-${stamp}.xlsx`);
     toast('Export XLSX généré.');
   }
   function saveLocal(){localStorage.setItem(key,JSON.stringify(tasks))}
   function loadLocal(){try{tasks=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){tasks=[]}}
-  function setCounts(){ const vt=visibleTasks(); $('totalCount').textContent=vt.length; $('todoCount').textContent=vt.filter(t=>(t.status||'À faire')==='À faire').length; $('progressCount').textContent=vt.filter(t=>t.status==='En cours').length; $('doneCount').textContent=vt.filter(t=>t.status==='Terminé').length; }
-  function renderList(){setCounts(); const list=$('taskList'); const q=($('search')?.value||'').toLowerCase(); let base=visibleTasks(); let items=currentFilter==='all'?base:base.filter(t=>(t.status||'À faire')===currentFilter); if(q)items=items.filter(t=>`${t.title||''} ${t.description||''} ${t.category||''}`.toLowerCase().includes(q)); if(!items.length){list.innerHTML='<div class="empty">Aucune intervention dans cette vue.</div>';return} list.innerHTML=items.map(t=>{const st=t.status||'À faire'; const stClass=st==='Terminé'?'st-done':st==='En cours'?'st-progress':'st-todo'; const id=String(t.id).replace(/'/g,''); const resetBtn=st==='Terminé'?`<button class="return-todo-btn" onclick="window.resetToTodo('${id}')">✕ À faire</button>`:''; return `<div class="task"><div class="task-top"><div class="task-title"><span style="color:#3badff">●</span> ${esc(t.title||'Sans titre')}</div><span class="badge ${(t.priority||'Normal').toLowerCase()}">${esc(t.priority||'Normal')}</span></div><div class="task-desc"><span style="color:#69d4ff">${icons[t.category]||'▦'}</span> ${esc(t.category||'Toutes les catégories')}</div><div class="task-meta"><span>▣ ${fmt(t.createdAt)}</span><span>♙ ${esc(t.createdBy||'Utilisateur')}</span><button class="status-btn ${stClass}" onclick="window.nextStatus('${id}')">${statusIcons[st]||'•'} ${esc(st)}</button>${resetBtn}</div><div class="task-meta"><button class="desc-btn" onclick="window.showDesc('${id}')">👁 Voir description</button></div></div>`}).join('')}
-    function openList(filter){currentFilter=filter;$('createPanel').style.display='none';$('listPanel').style.display='block';const map={all:['TOTAL','Toutes les interventions'],'À faire':['À FAIRE','Interventions à faire'],'En cours':['EN COURS','Interventions en cours'],'Terminé':['TERMINÉ','Interventions terminées']};$('listTitle').textContent=map[filter][0];$('listSub').textContent=map[filter][1];renderList();window.scrollTo({top:0,behavior:'smooth'})}
-  window.nextStatus=async(id)=>{const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return; const current=t.status||'À faire'; if(current==='Terminé'){return} const next=current==='À faire'?'En cours':'Terminé'; showStatusFlash(next); if(cloud&&fb){try{await fb.updateDoc(fb.doc(db,'interventions',id),{status:next,updatedAt:fb.serverTimestamp()});return}catch(e){console.error(e);toast('Erreur Firebase. Modification locale.')}} t.status=next;saveLocal();renderList();setCounts();};
-  window.resetToTodo=async(id)=>{const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return; const next='À faire'; showStatusFlash(next); if(cloud&&fb){try{await fb.updateDoc(fb.doc(db,'interventions',id),{status:next,updatedAt:fb.serverTimestamp()});return}catch(e){console.error(e);toast('Erreur Firebase. Modification locale.')}} t.status=next;saveLocal();renderList();setCounts();};
+  function transferredBaseTasks(){
+    return (currentUser?.category==='Direction'||getUserRole()==='Direction') ? allOperationalTasks() : visibleTasks();
+  }
+  function minutesBetween(start,end){
+    const a=toDateObj(start), b=toDateObj(end);
+    if(!start||!end||isNaN(a)||isNaN(b))return null;
+    const m=Math.round((b-a)/60000);
+    return m>=0?m:null;
+  }
+  function formatDuration(min){
+    if(min===null||min===undefined||isNaN(min))return '—';
+    if(min<60)return `${min} min`;
+    const h=Math.floor(min/60), r=min%60;
+    return r?`${h} h ${r} min`:`${h} h`;
+  }
+  function average(nums){const arr=nums.filter(n=>typeof n==='number'&&!isNaN(n));return arr.length?Math.round(arr.reduce((a,b)=>a+b,0)/arr.length):null}
+  function sameDay(a,b=new Date()){const d=toDateObj(a);return a&&!isNaN(d)&&d.toLocaleDateString('fr-FR')===b.toLocaleDateString('fr-FR')}
+  function isMaintCat(cat){return ['Maintenance','Responsable maintenance'].includes(cat)}
+  function isCleanCat(cat){return ['Propreté','Gouvernante'].includes(cat)}
+  function directionStatsBase(){return allOperationalTasks()}
+  function updateDirectionDashboard(){
+    const box=$('directionDashboard'); if(!box)return;
+    if(!canAccessReports()){box.innerHTML='';return}
+    const all=directionStatsBase();
+    const todo=all.filter(t=>(t.status||'À faire')==='À faire');
+    const progress=all.filter(t=>t.status==='En cours' && !isTransferredTask(t));
+    const urgent=all.filter(t=>(t.priority||'Normal')==='Urgent' && (t.status||'À faire')!=='Terminé');
+    const urgentProgress=progress.filter(t=>(t.priority||'Normal')==='Urgent');
+    const doneToday=all.filter(t=>t.status==='Terminé' && sameDay(t.completedAt||t.updatedAt||t.createdAt));
+    const todoM=todo.filter(t=>isMaintCat(t.category)).length;
+    const todoP=todo.filter(t=>isCleanCat(t.category)).length;
+    const progressM=progress.filter(t=>isMaintCat(t.category)).length;
+    const progressP=progress.filter(t=>isCleanCat(t.category)).length;
+    box.innerHTML=`<div class="direction-section"><div class="direction-section-title">🔧 Maintenance</div><div class="direction-grid"><button class="direction-kpi" onclick="window.openDashboardList('todoMaintenance')"><div class="kpi-label">À faire</div><div class="kpi-num">${todoM}</div></button><button class="direction-kpi" onclick="window.openDashboardList('progressMaintenance')"><div class="kpi-label">En cours</div><div class="kpi-num">${progressM}</div></button></div></div><div class="direction-section"><div class="direction-section-title">🧹 Propreté</div><div class="direction-grid"><button class="direction-kpi" onclick="window.openDashboardList('todoProprete')"><div class="kpi-label">À faire</div><div class="kpi-num">${todoP}</div></button><button class="direction-kpi" onclick="window.openDashboardList('progressProprete')"><div class="kpi-label">En cours</div><div class="kpi-num">${progressP}</div></button></div></div><div class="direction-section"><div class="direction-section-title">📌 Global</div><div class="direction-grid"><button class="direction-kpi" onclick="window.openDashboardList('dashboardTodo')"><div class="kpi-label">À faire</div><div class="kpi-num">${todo.length}</div><div class="kpi-sub">dont ${todoM} maintenance et ${todoP} propreté</div></button><button class="direction-kpi" onclick="window.openDashboardList('dashboardProgress')"><div class="kpi-label">En cours</div><div class="kpi-num">${progress.length}</div><div class="kpi-sub">dont ${urgentProgress.length} urgent(s)</div></button><button class="direction-kpi urgent" onclick="window.openDashboardList('dashboardUrgent')"><div class="kpi-label">Urgent</div><div class="kpi-num">${urgent.length}</div><div class="kpi-sub">interventions actives</div></button><button class="direction-kpi done" onclick="window.openDashboardList('doneToday')"><div class="kpi-label">Terminées aujourd’hui</div><div class="kpi-num">${doneToday.length}</div></button></div></div>`;
+  }
+  window.openDashboardList=(filter)=>{showPage('appPage');openList(filter)};
+
+  function isoDateKey(d){
+    try{return toDateObj(d).toISOString().slice(0,10)}catch(e){return ''}
+  }
+  function parseDateInput(v,endOfDay=false){
+    if(!v)return null;
+    const d=new Date(v+'T'+(endOfDay?'23:59:59':'00:00:00'));
+    return isNaN(d)?null:d;
+  }
+  function periodLabel(start,end,done){
+    if(start&&end)return `${start.toLocaleDateString('fr-FR')} → ${end.toLocaleDateString('fr-FR')}`;
+    if(start)return `Depuis le ${start.toLocaleDateString('fr-FR')}`;
+    if(end)return `Jusqu’au ${end.toLocaleDateString('fr-FR')}`;
+    return done.length?'Toute la période':'Aucune période';
+  }
+  function getPeriodDayCount(start,end,done){
+    if(start&&end){
+      const diff=Math.floor((new Date(end.getFullYear(),end.getMonth(),end.getDate())-new Date(start.getFullYear(),start.getMonth(),start.getDate()))/86400000)+1;
+      return Math.max(1,diff);
+    }
+    const days=new Set(done.map(t=>isoDateKey(t.completedAt||t.updatedAt||t.createdAt)).filter(Boolean));
+    return Math.max(1,days.size||1);
+  }
+  function getDoneForSelectedPeriod(){
+    const start=parseDateInput($('timeDateStart')?.value,false);
+    const end=parseDateInput($('timeDateEnd')?.value,true);
+    const all=allOperationalTasks();
+    const done=all.filter(t=>{
+      if((t.status||'')!=='Terminé'||!t.createdAt||!t.completedAt)return false;
+      const d=toDateObj(t.completedAt||t.updatedAt||t.createdAt);
+      if(start&&d<start)return false;
+      if(end&&d>end)return false;
+      return true;
+    });
+    return {start,end,done,dayCount:getPeriodDayCount(start,end,done)};
+  }
+  function timeDetailItemsForCategory(cat){
+    const {start,end,done,dayCount}=getDoneForSelectedPeriod();
+    const items=done.filter(t=>(t.category||'')===cat).map(t=>({task:t,total:minutesBetween(t.createdAt,t.completedAt)})).filter(x=>x.total!==null);
+    // Affichage lisible pour la Direction : ordre chronologique de création, puis détail par intervention.
+    items.sort((a,b)=>toDateObj(a.task.createdAt)-toDateObj(b.task.createdAt));
+    return {start,end,dayCount,items,total:items.reduce((sum,x)=>sum+x.total,0)};
+  }
+  window.openTimeServiceDetail=(cat)=>{
+    const {start,end,dayCount,items,total}=timeDetailItemsForCategory(cat);
+    $('descTitle').textContent=`${icons[cat]||'▦'} ${cat}`;
+    $('descCat').innerHTML=`Détail des temps de traitement`;
+    const avg=items.length?Math.round(total/items.length):null;
+    const perDay=Math.round(total/Math.max(1,dayCount));
+    const rows=items.map(({task,total})=>{
+      const place=task.endroit||task.lieu||task.location||'';
+      const label=`${place?esc(place)+' - ':''}${esc(task.title||'Sans titre')}`;
+      return `<div class="time-detail-row"><div class="time-detail-title">${label} : ${formatDuration(total)}</div><div class="desc-meta-line">📅 Créée : ${fmt(task.createdAt)}</div><div class="desc-meta-line">✅ Terminée : ${fmt(task.completedAt)}</div><button class="desc-btn" onclick="window.showDesc('${String(task.id||'').replace(/'/g,'')}')">👁 Voir description</button></div>`;
+    }).join('')||'<div class="time-empty">Aucune intervention terminée pour ce service sur la période.</div>';
+    $('descText').innerHTML=`<div class="time-detail-head"><div class="desc-meta-line">Période : ${esc(periodLabel(start,end,items.map(x=>x.task)))}</div><div class="desc-meta-line">Total : <strong>${formatDuration(total)}</strong></div><div class="desc-meta-line">Nombre d’interventions : <strong>${items.length}</strong></div><div class="desc-meta-line">Moyenne par intervention : <strong>${formatDuration(avg)}</strong></div><div class="desc-meta-line">Temps par jour : <strong>${formatDuration(perDay)}</strong></div></div>${rows}`;
+    $('descModal').classList.add('show');
+  };
+  function getTimeSearchResults(){
+    const tq=($('timeSearch')?.value||'').toLowerCase().trim();
+    const {start,end}=getDoneForSelectedPeriod();
+    const all=allOperationalTasks();
+    if(!tq)return [];
+    return all.filter(t=>{
+      const d=t.completedAt?toDateObj(t.completedAt):null;
+      if(start&&d&&d<start)return false;
+      if(end&&d&&d>end)return false;
+      return matchesSmartSearch(t,tq);
+    }).sort((a,b)=>toDateObj(b.createdAt)-toDateObj(a.createdAt));
+  }
+  function exportTimeSearchResultsXlsx(){
+    const results=getTimeSearchResults();
+    const query=($('timeSearch')?.value||'recherche').trim()||'recherche';
+    if(!results.length){toast('Aucun résultat à exporter.');return}
+    const headers=['Titre','Endroit','Catégorie','Priorité','Statut','Créé par','Date création','Pris en charge par','Date prise en charge','Terminé par','Date terminé','Temps total','Description','Commentaire résolution'];
+    const rows=results.map(t=>{
+      const total=(t.createdAt&&t.completedAt)?minutesBetween(t.createdAt,t.completedAt):null;
+      return [
+        cleanCell(t.title||''),
+        cleanCell(t.endroit||t.lieu||t.location||''),
+        cleanCell(t.category||''),
+        cleanCell(t.priority||'Normal'),
+        cleanCell(t.status||'À faire'),
+        cleanCell(t.createdBy||''),
+        fmt(t.createdAt),
+        cleanCell(t.handledBy||''),
+        t.handledAt?fmt(t.handledAt):'',
+        cleanCell(t.completedBy||''),
+        t.completedAt?fmt(t.completedAt):'',
+        t.completedAt?formatDuration(total):'Non terminé',
+        cleanCell(t.description||''),
+        cleanCell(t.resolutionComment||'')
+      ];
+    });
+    const sheet=buildSheetXml(headers,rows,'<cols><col min="1" max="1" width="32" customWidth="1"/><col min="2" max="2" width="16" customWidth="1"/><col min="3" max="14" width="24" customWidth="1"/></cols>');
+    const files=[
+      {name:'[Content_Types].xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/></Types>'},
+      {name:'_rels/.rels',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'},
+      {name:'xl/workbook.xml',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="Recherche" sheetId="1" r:id="rId1"/></sheets></workbook>'},
+      {name:'xl/_rels/workbook.xml.rels',content:'<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>'},
+      {name:'xl/worksheets/sheet1.xml',content:sheet}
+    ];
+    const stamp=new Date().toISOString().slice(0,10);
+    const safe=query.replace(/[^a-z0-9_-]+/gi,'-').slice(0,24)||'recherche';
+    openFileChooserOrDownload(makeZip(files),`recherche-${safe}-relais-ia-${stamp}.xlsx`);
+    toast('Export recherche XLSX généré.');
+  }
+  window.exportTimeSearchResultsXlsx=exportTimeSearchResultsXlsx;
+
+  function updateTimeStats(){
+    const box=$('timeStatsContent');
+    if(!box)return;
+    if(!canAccessReports()){box.innerHTML='';return}
+    const tq=($('timeSearch')?.value||'').toLowerCase().trim();
+    const clearTimeBtn=$('clearTimeSearch');
+    if(clearTimeBtn)clearTimeBtn.classList.toggle('show',!!tq);
+
+    if(tq){
+      const results=getTimeSearchResults();
+      const resultItems=results.map(t=>{
+        const total=(t.createdAt&&t.completedAt)?minutesBetween(t.createdAt,t.completedAt):null;
+        const id=String(t.id||'').replace(/'/g,'');
+        const place=t.endroit||t.lieu||t.location||'';
+        const titleLine=`${place?esc(place)+' - ':''}${esc(t.title||'Sans titre')}`;
+        return `<div class="time-task"><strong>${titleLine}</strong><div class="time-line">${icons[t.category]||'▦'} ${esc(t.category||'')}</div><div class="time-line">Statut : <strong>${esc(t.status||'À faire')}</strong></div><div class="time-line">Créée : ${fmt(t.createdAt)}</div><div class="time-line">Prise en charge : ${t.handledAt?fmt(t.handledAt):'—'}</div><div class="time-line">Terminée : ${t.completedAt?fmt(t.completedAt):'—'}</div><div class="time-line">Temps total : <strong>${t.completedAt?formatDuration(total):'Non terminé'}</strong></div><button class="desc-btn" onclick="window.showDesc('${id}')">👁 Voir description</button></div>`;
+      }).join('') || '<div class="time-empty">Aucune intervention ne correspond à cette recherche.</div>';
+      const exportBtn=results.length?`<button class="export-btn" onclick="window.exportTimeSearchResultsXlsx()">📈 Exporter cette recherche Excel</button>`:'';
+      box.innerHTML=`<div class="time-stats"><div class="time-card"><div class="time-title">Résultat de la recherche ${esc($('timeSearch')?.value||'')}</div><div class="time-line">${results.length} intervention(s) trouvée(s).</div><div class="time-history">${resultItems}</div>${exportBtn}</div></div>`;
+      return;
+    }
+
+    const {start,end,done,dayCount}=getDoneForSelectedPeriod();
+    const byCat={};
+    let globalTotal=0;
+    done.forEach(t=>{
+      const total=minutesBetween(t.createdAt,t.completedAt);
+      const prise=minutesBetween(t.createdAt,t.handledAt);
+      const traitement=minutesBetween(t.handledAt||t.createdAt,t.completedAt);
+      const cat=t.category||'Sans catégorie';
+      if(!byCat[cat])byCat[cat]=0;
+      if(total!==null){byCat[cat]+=total;globalTotal+=total;}
+      t._timeTotal=total;t._timeTake=prise;t._timeWork=traitement;
+    });
+    const cats=['Maintenance','Propreté','Réception','Responsable maintenance','Gouvernante','Responsable réception'];
+    const avgCards=cats.filter(c=>byCat[c]).map(c=>`<div class="time-mini clickable" onclick="window.openTimeServiceDetail('${c.replace(/'/g,'')}')"><div class="label">${icons[c]||'▦'} ${esc(c)}</div><div class="num">${formatDuration(Math.round(byCat[c]/dayCount))}</div><div class="hint">Voir détail</div></div>`).join('');
+    const globalAvg=formatDuration(Math.round(globalTotal/dayCount));
+
+    const statsHtml = done.length
+      ? `<div class="time-card"><div class="time-title">Temps de traitement par jour</div><div class="time-value">${globalAvg}</div><div class="time-line">Période : ${esc(periodLabel(start,end,done))} · ${dayCount} jour(s)</div><div class="time-line">Calcul basé sur les interventions terminées de la période.</div><div class="time-grid">${avgCards||'<div class="time-empty">Pas encore assez de données par service.</div>'}</div></div>`
+      : `<div class="time-card"><div class="time-empty">Aucune intervention terminée sur cette période.</div></div>`;
+    box.innerHTML=`<div class="time-stats">${statsHtml}</div>`;
+  }
+
+  function setCounts(){
+    const vt=visibleTasks();
+    const countBase=isSimpleReception()?allOperationalTasks():(canSeeGlobalTaskView()?allOperationalTasks():vt);
+    const total=countBase.length;
+    const todo=countBase.filter(t=>(t.status||'À faire')==='À faire').length;
+    const progressBase=isSimpleReception()?allOperationalTasks():((canSeeAllInProgress()||canSeeGlobalTaskView())?allOperationalTasks():vt);
+    const progress=progressBase.filter(t=>t.status==='En cours' && !isTransferredTask(t)).length;
+    const transferred=(isSimpleReception()?allOperationalTasks():(canSeeGlobalTaskView()?allOperationalTasks():transferredBaseTasks())).filter(isTransferredTask).length;
+    const done=countBase.filter(t=>t.status==='Terminé').length;
+    if($('totalCount'))$('totalCount').textContent=total;
+    if($('todoCount'))$('todoCount').textContent=todo;
+    if($('progressCount'))$('progressCount').textContent=progress;
+    if($('transferCount'))$('transferCount').textContent=transferred;
+    if($('doneCount'))$('doneCount').textContent=done;
+    if($('homeTotalCount'))$('homeTotalCount').textContent=total;
+    if($('homeTodoCount'))$('homeTodoCount').textContent=todo;
+    if($('homeProgressCount'))$('homeProgressCount').textContent=progress;
+    if($('homeTransferCount'))$('homeTransferCount').textContent=transferred;
+    if($('homeDoneCount'))$('homeDoneCount').textContent=done;
+    if(isSimpleReception()){
+      const own=receptionOwnTasks();
+      if($('receptionTodoCount'))$('receptionTodoCount').textContent=own.filter(t=>(t.status||'À faire')==='À faire').length;
+      if($('receptionProgressCount'))$('receptionProgressCount').textContent=own.filter(t=>t.status==='En cours' && !isTransferredTask(t)).length;
+      if($('receptionTransferCount'))$('receptionTransferCount').textContent=own.filter(isTransferredTask).length;
+      if($('receptionDoneCount'))$('receptionDoneCount').textContent=own.filter(t=>t.status==='Terminé').length;
+    }
+    updateTimeStats();
+    updateDirectionDashboard();
+  }
+  function renderList(){
+    setCounts();
+    const list=$('taskList');
+    const q=($('search')?.value||'').toLowerCase();
+    const clearBtn=$('clearSearch');
+    if(clearBtn)clearBtn.classList.toggle('show',!!q);
+    let base=(canSeeGlobalTaskView() || (currentFilter==='En cours'&&canSeeAllInProgress()))?allOperationalTasks():visibleTasks();
+    let items;
+    if(currentFilter==='Transféré'){
+      items=(canSeeGlobalTaskView()?allOperationalTasks():transferredBaseTasks()).filter(isTransferredTask);
+    }else if(currentFilter==='receptionOpsTodo'){
+      items=receptionOpsTasks().filter(t=>(t.status||'À faire')==='À faire');
+    }else if(currentFilter==='receptionOpsProgress'){
+      items=receptionOpsTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='receptionOpsTransfer'){
+      items=receptionOpsTasks().filter(isTransferredTask);
+    }else if(currentFilter==='receptionOpsDone'){
+      items=receptionOpsTasks().filter(t=>t.status==='Terminé');
+    }else if(currentFilter==='receptionAllTodo'){
+      items=allOperationalTasks().filter(t=>(t.status||'À faire')==='À faire');
+    }else if(currentFilter==='receptionAllProgress'){
+      items=allOperationalTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='receptionAllTransfer'){
+      items=allOperationalTasks().filter(isTransferredTask);
+    }else if(currentFilter==='receptionAllDone'){
+      items=allOperationalTasks().filter(t=>t.status==='Terminé');
+    }else if(currentFilter==='receptionOwnTodo'){
+      items=receptionOwnTasks().filter(t=>(t.status||'À faire')==='À faire');
+    }else if(currentFilter==='receptionOwnProgress'){
+      items=receptionOwnTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='receptionOwnTransfer'){
+      items=receptionOwnTasks().filter(isTransferredTask);
+    }else if(currentFilter==='receptionOwnDone'){
+      items=receptionOwnTasks().filter(t=>t.status==='Terminé');
+    }else if(currentFilter==='simplePropreteTodo'){
+      items=tasks.filter(t=>(t.category||'')==='Propreté' && (t.status||'À faire')==='À faire');
+    }else if(currentFilter==='simplePropreteProgress'){
+      items=tasks.filter(t=>(t.category||'')==='Propreté' && t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='simplePropreteTransfer'){
+      items=tasks.filter(t=>(t.category||'')==='Propreté').filter(isTransferredTask);
+    }else if(currentFilter==='simplePropreteDone'){
+      items=tasks.filter(t=>(t.category||'')==='Propreté' && t.status==='Terminé');
+    }else if(currentFilter==='simpleMaintenanceTodo'){
+      items=tasks.filter(t=>(t.category||'')==='Maintenance' && (t.status||'À faire')==='À faire');
+    }else if(currentFilter==='simpleMaintenanceProgress'){
+      items=tasks.filter(t=>(t.category||'')==='Maintenance' && t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='simpleMaintenanceTransfer'){
+      items=tasks.filter(t=>(t.category||'')==='Maintenance').filter(isTransferredTask);
+    }else if(currentFilter==='simpleMaintenanceDone'){
+      items=tasks.filter(t=>(t.category||'')==='Maintenance' && t.status==='Terminé');
+    }else if(currentFilter==='dashboardTodo'){
+      items=allOperationalTasks().filter(t=>(t.status||'À faire')==='À faire');
+    }else if(currentFilter==='dashboardProgress'){
+      items=allOperationalTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t));
+    }else if(currentFilter==='dashboardUrgent'){
+      items=allOperationalTasks().filter(t=>(t.priority||'Normal')==='Urgent' && (t.status||'À faire')!=='Terminé');
+    }else if(currentFilter==='doneToday'){
+      items=allOperationalTasks().filter(t=>t.status==='Terminé' && sameDay(t.completedAt||t.updatedAt||t.createdAt));
+    }else if(currentFilter==='todoMaintenance'){
+      items=allOperationalTasks().filter(t=>(t.status||'À faire')==='À faire' && isMaintCat(t.category));
+    }else if(currentFilter==='todoProprete'){
+      items=allOperationalTasks().filter(t=>(t.status||'À faire')==='À faire' && isCleanCat(t.category));
+    }else if(currentFilter==='progressMaintenance'){
+      items=allOperationalTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t) && isMaintCat(t.category));
+    }else if(currentFilter==='progressProprete'){
+      items=allOperationalTasks().filter(t=>t.status==='En cours' && !isTransferredTask(t) && isCleanCat(t.category));
+    }else if(currentFilter==='all'){
+      items=base;
+    }else if(currentFilter==='En cours'){
+      items=base.filter(t=>(t.status||'À faire')==='En cours' && !isTransferredTask(t));
+    }else{
+      items=base.filter(t=>(t.status||'À faire')===currentFilter);
+    }
+    if(q)items=items.filter(t=>matchesSmartSearch(t,q));
+    if(['À faire','En cours','Transféré','receptionOpsTodo','receptionOpsProgress','receptionOpsTransfer','receptionAllTodo','receptionAllProgress','receptionAllTransfer','receptionOwnTodo','receptionOwnProgress','receptionOwnTransfer','simplePropreteTodo','simplePropreteProgress','simplePropreteTransfer','simpleMaintenanceTodo','simpleMaintenanceProgress','simpleMaintenanceTransfer'].includes(currentFilter)){
+      const order={Urgent:0,Important:1,Normal:2};items.sort((a,b)=>(order[a.priority||'Normal']??2)-(order[b.priority||'Normal']??2));
+    }
+    if(!items.length){list.innerHTML='<div class="empty">Aucune intervention dans cette vue.</div>';return}
+    list.innerHTML=items.map(t=>{
+      const st=t.status||'À faire';
+      const stClass=st==='Terminé'?'st-done':st==='En cours'?'st-progress':'st-todo';
+      const id=String(t.id).replace(/'/g,'');
+      const resetBtn=st==='Terminé'?`<button class="return-todo-btn" onclick="window.resetToTodo('${id}')">✕ À faire</button>`:'';
+      const createdBy=esc(t.createdBy||'Utilisateur');
+      const handlerRaw=t.handledBy||t.treatedBy||t.assignedTo||t.inProgressBy||'';
+      const handler=esc(handlerRaw);
+      const transferredBy=esc(t.transferredBy||'');
+      const transferredTo=esc(t.transferredTo||'');
+      const handlerInfo=st==='En cours'?`<span class="handler-pill">⟳ En cours par ${handler||'non renseigné'}</span>`:'';
+      const transferInfo=(transferredBy||transferredTo)?`<span class="handler-pill">⬆️ Transféré ${transferredBy?'par '+transferredBy:''}${transferredTo?' à '+transferredTo:''}</span>`:'';
+      const directionAlert=(currentFilter==='Transféré' && transferredTo==='Direction')?`<span class="direction-alert">⚠️ Action Direction nécessaire</span>`:'';
+      const superior=getSuperiorCategory();
+      const transferBtn='';
+      const actionAllowed=canActOnTask(t);
+      const statusControl=actionAllowed?`<button class="status-btn ${stClass}" onclick="window.nextStatus('${id}')">${statusIcons[st]||'•'} ${esc(st)}</button>`:`<span class="status-btn ${stClass}" style="cursor:default;opacity:.78">${statusIcons[st]||'•'} ${esc(st)}</span>`;
+      const resetControl=(actionAllowed?resetBtn:'');
+      const cardClass=(transferredTo==='Direction')?'task direction-action':'task';
+      return `<div class="${cardClass}"><div class="task-top"><div class="task-title"><span style="color:#3badff">●</span> ${esc(t.title||'Sans titre')}</div><span class="badge ${(t.priority||'Normal').toLowerCase()}">${esc(t.priority||'Normal')}</span></div><div class="task-desc"><span style="color:#69d4ff">${icons[t.category]||'▦'}</span> ${esc(t.category||'Toutes les catégories')}</div>${(t.endroit||t.lieu||t.location)?`<div class="task-desc">📍 ${esc(t.endroit||t.lieu||t.location)}</div>`:''}<div class="task-meta"><span>▣ ${fmt(t.createdAt)}</span><span>♙ Créé par ${createdBy}</span>${handlerInfo}${transferInfo}${directionAlert}${statusControl}${resetControl}</div><div class="task-meta"><button class="desc-btn" onclick="window.showDesc('${id}')">👁 Voir description</button>${transferBtn}</div></div>`
+    }).join('')
+  }
+  function openList(filter){
+    currentFilter=filter;$('createPanel').style.display='none';$('listPanel').style.display='block';
+    const map={all:['TOTAL','Toutes les interventions'],'À faire':['À FAIRE','Interventions à faire'],'En cours':['EN COURS','Interventions en cours'],'Transféré':['TRANSFÉRÉ','Interventions transférées'],'Terminé':['TERMINÉ','Interventions terminées'],receptionOpsTodo:['À FAIRE','Maintenance et Propreté à faire'],receptionOpsProgress:['EN COURS','Maintenance et Propreté en cours'],receptionOpsTransfer:['TRANSFÉRÉ','Maintenance et Propreté transférées'],receptionOpsDone:['TERMINÉ','Maintenance et Propreté terminées'],receptionAllTodo:['À FAIRE','Toutes les interventions à faire'],receptionAllProgress:['EN COURS','Toutes les interventions en cours'],receptionAllTransfer:['TRANSFÉRÉ','Toutes les interventions transférées'],receptionAllDone:['TERMINÉ','Toutes les interventions terminées'],receptionOwnTodo:['À FAIRE · RÉCEPTION','Interventions Réception à faire'],receptionOwnProgress:['EN COURS · RÉCEPTION','Interventions Réception en cours'],receptionOwnTransfer:['TRANSFÉRÉ · RÉCEPTION','Interventions Réception transférées'],receptionOwnDone:['TERMINÉ · RÉCEPTION','Interventions Réception terminées'],simplePropreteTodo:['À FAIRE','Interventions Propreté à faire'],simplePropreteProgress:['EN COURS','Interventions Propreté en cours'],simplePropreteTransfer:['TRANSFÉRÉ','Interventions Propreté transférées'],simplePropreteDone:['TERMINÉ','Interventions Propreté terminées'],simpleMaintenanceTodo:['À FAIRE','Interventions Maintenance à faire'],simpleMaintenanceProgress:['EN COURS','Interventions Maintenance en cours'],simpleMaintenanceTransfer:['TRANSFÉRÉ','Interventions Maintenance transférées'],simpleMaintenanceDone:['TERMINÉ','Interventions Maintenance terminées'],dashboardTodo:['À FAIRE','Toutes les interventions à faire'],dashboardProgress:['EN COURS','Toutes les interventions en cours'],dashboardUrgent:['URGENT','Toutes les interventions urgentes actives'],doneToday:['TERMINÉ AUJOURD’HUI','Interventions terminées aujourd’hui'],todoMaintenance:['MAINTENANCE À FAIRE','Interventions maintenance à faire'],todoProprete:['PROPRETÉ À FAIRE','Interventions propreté à faire'],progressMaintenance:['MAINTENANCE EN COURS','Interventions maintenance en cours'],progressProprete:['PROPRETÉ EN COURS','Interventions propreté en cours']};
+    if(isSimpleProprete()){
+      if(filter==='À faire')map['À faire']=['À FAIRE','Interventions Propreté à faire'];
+      if(filter==='En cours')map['En cours']=['EN COURS','Interventions Propreté en cours'];
+      if(filter==='Transféré')map['Transféré']=['TRANSFÉRÉ','Interventions Propreté transférées'];
+      if(filter==='Terminé')map['Terminé']=['TERMINÉ','Interventions Propreté terminées'];
+    }
+    $('listTitle').textContent=(map[filter]||map.all)[0];$('listSub').textContent=(map[filter]||map.all)[1];renderList();window.scrollTo({top:0,behavior:'smooth'})
+  }
+  async function applyTaskUpdate(t,id,update,localPopup){
+    if(cloud&&fb){try{await fb.updateDoc(fb.doc(db,'interventions',id),update);return}catch(e){console.error(e);toast('Erreur Firebase. Modification locale.')}}
+    Object.assign(t,update);saveLocal();renderList();setCounts();
+    if(localPopup)showCenterPopup(localPopup.text,localPopup.type);
+  }
+  window.nextStatus=async(id)=>{
+    const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return;
+    const current=t.status||'À faire'; if(current==='Terminé'){return}
+    if(current==='À faire'){
+      const handlerName=currentUser?.firstName||'Utilisateur';
+      const update={status:'En cours',handledBy:handlerName,handledAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString(),updatedAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()};
+      showStatusFlash('En cours'); await applyTaskUpdate(t,id,update); return;
+    }
+    openResolutionModal(id);
+  };
+  window.resetToTodo=async(id)=>{const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return; const next='À faire'; const update={status:next,handledBy:'',handledAt:null,transferredBy:'',transferredTo:'',transferComment:'',updatedAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()}; showStatusFlash(next); if(cloud&&fb){try{await fb.updateDoc(fb.doc(db,'interventions',id),update);return}catch(e){console.error(e);toast('Erreur Firebase. Modification locale.')}} Object.assign(t,update);saveLocal();renderList();setCounts();};
+  window.transferToSuperior=async(id,comment='')=>{
+    const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return;
+    const superior=getSuperiorCategory(); if(!superior){toast('Aucun supérieur disponible.');return}
+    const now=cloud&&fb?fb.serverTimestamp():new Date().toISOString();
+    const historyAt=new Date().toISOString();
+    const transferEntry={by:currentUser?.firstName||'Utilisateur',from:currentUser?.category||'',to:superior,comment:comment||'',transferComment:comment||'',commentaire:comment||'',at:historyAt};
+    const update={category:superior,status:'En cours',transferredBy:currentUser?.firstName||'Utilisateur',transferredFrom:currentUser?.category||'',transferredTo:superior,transferComment:comment||'',transferredAt:now,transferHistory:[...(Array.isArray(t.transferHistory)?t.transferHistory:[]),transferEntry],updatedAt:now};
+    showCenterPopup(superior==='Direction'?'⬆️ Direction informée':'⬆️ Supérieur informé','progress');
+    await applyTaskUpdate(t,id,update);
+  };
+  function openResolutionModal(id){
+    pendingResolutionTaskId=id;
+    const t=tasks.find(x=>String(x.id)===String(id));
+    const superior=getSuperiorCategory();
+    $('resolutionComment').value='';
+    $('resolutionTitle').textContent='Clôture de l’intervention';
+    $('resolutionSub').textContent='Ajoutez obligatoirement un petit commentaire, puis choisissez si la tâche est résolue ou doit être transférée.';
+    $('resolutionEscalate').textContent=(superior==='Direction')?'Direction ⤴️':'⬆️ Transférer au supérieur';
+    $('resolutionEscalate').style.display=superior?'block':'none';
+    $('resolutionModal').classList.add('show');
+  }
+  function closeResolutionModal(){pendingResolutionTaskId=null;$('resolutionModal').classList.remove('show')}
+  async function resolveCurrentTask(){
+    const id=pendingResolutionTaskId; const t=tasks.find(x=>String(x.id)===String(id)); if(!t)return;
+    const comment=$('resolutionComment').value.trim(); if(!comment){toast('Ajoute un petit texte obligatoire.');return}
+    const now=cloud&&fb?fb.serverTimestamp():new Date().toISOString();
+    const update={status:'Terminé',completedBy:currentUser?.firstName||'Utilisateur',completedAt:now,resolutionComment:comment,updatedAt:now};
+    closeResolutionModal(); showStatusFlash('Terminé'); await applyTaskUpdate(t,id,update);
+  }
+  async function escalateCurrentTask(){
+    const id=pendingResolutionTaskId; const comment=$('resolutionComment').value.trim(); if(!comment){toast('Ajoute un petit texte obligatoire.');return}
+    closeResolutionModal(); await window.transferToSuperior(id,comment);
+  }
   function showPage(page){
     if(page!=='loginPage'&&!currentUser){page='loginPage'}
-    if(page==='userPage'&&!canManageUsers()){toast('Accès réservé à la Direction et à la Réception.');page='homePage'}
+    if(page==='userPage'&&!canManageUsers()){toast('Accès réservé à la Direction et au Responsable réception.');page='homePage'}
     if(page==='reportPage'&&!canAccessReports()){toast('Accès réservé à la Direction.');page='homePage'}
     ['loginPage','homePage','appPage','reportPage','userPage'].forEach(id=>{const el=$(id); if(el)el.style.display=(id===page?'block':'none')});
     updateSessionUi();
@@ -347,9 +1033,10 @@
   function loadUsersLocal(){try{users=JSON.parse(localStorage.getItem(usersKey)||'[]')}catch(e){users=[]}}
   function saveUserLocal(user){users.unshift({...user,id:String(Date.now()),createdAt:new Date().toISOString()});saveUsersLocal();renderUsers()}
   function showUserSub(section){$('userMenuPanel').style.display=section?'none':'block';$('createUserSection').classList.toggle('show',section==='create');$('manageUserSection').classList.toggle('show',section==='manage');if(section==='manage')renderUsers()}
-  function renderUsers(){const box=$('userList');if(!box)return;if(!users.length){box.innerHTML='<div class="empty">Aucun utilisateur créé pour le moment.</div>';return}box.innerHTML=users.map(u=>{const id=String(u.id).replace(/'/g,'');const cat=u.category||'';return `<div class="user-card"><div class="user-card-top"><div><div class="user-name">${esc(u.firstName||'Sans prénom')}</div><div class="user-cat">${icons[cat]||'▦'} ${esc(cat||'Aucune catégorie')}</div></div><span class="badge normal">PIN ${esc(u.pin||'')}</span></div><div class="edit-grid"><input id="editName_${id}" value="${esc(u.firstName||'')}" placeholder="Prénom" /><input id="editPin_${id}" value="${esc(u.pin||'')}" inputmode="numeric" placeholder="Code PIN" /><div class="edit-cats" id="editCats_${id}">${['Maintenance','Propreté','Réception','Direction'].map(c=>`<button class="edit-cat ${cat===c?'active':''}" data-edit-cat="${c}" onclick="window.setEditCategory('${id}','${c}')">${icons[c]}</button>`).join('')}</div></div><div class="user-actions"><button class="save-user" onclick="window.updateUser('${id}')">✅ Modifier</button><button class="delete-user" onclick="window.deleteUser('${id}')">🗑️ Supprimer</button></div></div>`}).join('')}
-  window.setEditCategory=(id,cat)=>{const u=users.find(x=>String(x.id)===String(id));if(u)u._editCategory=cat;document.querySelectorAll(`#editCats_${CSS.escape(id)} .edit-cat`).forEach(b=>b.classList.toggle('active',b.dataset.editCat===cat))};
-  window.updateUser=async(id)=>{const u=users.find(x=>String(x.id)===String(id));if(!u)return;const firstName=($('editName_'+id)?.value||'').trim();const pin=($('editPin_'+id)?.value||'').trim();const category=u._editCategory||u.category;if(!firstName){toast('Ajoute un prénom.');return}if(!category){showCategoryModal('user');return}if(!pin){toast('Ajoute un code PIN.');return}try{if(cloud&&fb){await fb.updateDoc(fb.doc(db,'users',id),{firstName,category,pin,updatedAt:fb.serverTimestamp()})}else{Object.assign(u,{firstName,category,pin,updatedAt:new Date().toISOString()});saveUsersLocal();renderUsers()}showCenterPopup('✅ Utilisateur modifié','done');toast('Utilisateur modifié.')}catch(e){console.error(e);Object.assign(u,{firstName,category,pin,updatedAt:new Date().toISOString()});saveUsersLocal();renderUsers();showCenterPopup('✅ Utilisateur modifié','done');toast('Firebase indisponible : modification locale.')}};
+  function renderUsers(){const box=$('userList');if(!box)return;if(!users.length){box.innerHTML='<div class="empty">Aucun utilisateur créé pour le moment.</div>';return}box.innerHTML=users.map(u=>{const id=String(u.id).replace(/'/g,'');const cat=u.category||'';const role=getUserRole(u);return `<div class="user-card"><div class="user-card-top"><div><div class="user-name">${esc(u.firstName||'Sans prénom')}</div><div class="user-cat">${icons[cat]||'▦'} ${esc(cat||'Aucune catégorie')} · ${esc(role)}</div></div><span class="badge normal">PIN ${esc(u.pin||'')}</span></div><div class="edit-grid"><input id="editName_${id}" value="${esc(u.firstName||'')}" placeholder="Prénom" /><input id="editPin_${id}" value="${esc(u.pin||'')}" inputmode="numeric" placeholder="Code PIN" /><div class="edit-cats" id="editCats_${id}">${['Maintenance','Propreté','Réception','Direction'].map(c=>`<button class="edit-cat ${cat===c?'active':''}" data-edit-cat="${c}" onclick="window.setEditCategory('${id}','${c}')">${icons[c]}</button>`).join('')}</div><div class="role-grid" id="editRoles_${id}">${['Utilisateur','Responsable maintenance','Responsable réception','Gouvernante','Direction'].map(r=>`<button class="role-choice ${role===r?'active':''}" data-edit-role="${r}" onclick="window.setEditRole('${id}','${r}')">${esc(r)}</button>`).join('')}</div></div><div class="user-actions"><button class="save-user" onclick="window.updateUser('${id}')">✅ Modifier</button><button class="delete-user" onclick="window.deleteUser('${id}')">🗑️ Supprimer</button></div></div>`}).join('')}
+    window.setEditCategory=(id,cat)=>{const u=users.find(x=>String(x.id)===String(id));if(u)u._editCategory=cat;document.querySelectorAll(`#editCats_${CSS.escape(id)} .edit-cat`).forEach(b=>b.classList.toggle('active',b.dataset.editCat===cat))};
+  window.setEditRole=(id,role)=>{const u=users.find(x=>String(x.id)===String(id));if(u)u._editRole=role;document.querySelectorAll(`#editRoles_${CSS.escape(id)} .role-choice`).forEach(b=>b.classList.toggle('active',b.dataset.editRole===role))};
+  window.updateUser=async(id)=>{const u=users.find(x=>String(x.id)===String(id));if(!u)return;const firstName=($('editName_'+id)?.value||'').trim();const pin=($('editPin_'+id)?.value||'').trim();const category=u._editCategory||u.category;const role=u._editRole||getUserRole(u);if(!firstName){toast('Ajoute un prénom.');return}if(!category){showCategoryModal('user');return}if(!pin){toast('Ajoute un code PIN.');return}try{if(cloud&&fb){await fb.updateDoc(fb.doc(db,'users',id),{firstName,category,role,pin,updatedAt:fb.serverTimestamp()})}else{Object.assign(u,{firstName,category,role,pin,updatedAt:new Date().toISOString()});saveUsersLocal();renderUsers()}showCenterPopup('✅ Utilisateur modifié','done');toast('Utilisateur modifié.')}catch(e){console.error(e);Object.assign(u,{firstName,category,role,pin,updatedAt:new Date().toISOString()});saveUsersLocal();renderUsers();showCenterPopup('✅ Utilisateur modifié','done');toast('Firebase indisponible : modification locale.')}};
   window.deleteUser=async(id)=>{const u=users.find(x=>String(x.id)===String(id));if(!u)return;try{if(cloud&&fb){await fb.deleteDoc(fb.doc(db,'users',id))}else{users=users.filter(x=>String(x.id)!==String(id));saveUsersLocal();renderUsers()}showCenterPopup('🗑️ Utilisateur supprimé','todo');toast('Utilisateur supprimé.')}catch(e){console.error(e);users=users.filter(x=>String(x.id)!==String(id));saveUsersLocal();renderUsers();showCenterPopup('🗑️ Utilisateur supprimé','todo');toast('Firebase indisponible : suppression locale.')}};
   async function createUser(){
     const firstName=$('userFirstName').value.trim();
@@ -357,16 +1044,66 @@
     if(!firstName){toast('Ajoute un prénom.');return}
     if(!selectedUserCategory){showCategoryModal('user');return}
     if(!pin){toast('Ajoute un code PIN.');return}
-    const user={firstName,category:selectedUserCategory,pin,createdAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()};
+    const user={firstName,category:selectedUserCategory,role:selectedUserRole,pin,createdAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()};
     $('createUserBtn').disabled=true;
     try{
       if(cloud&&fb){await fb.addDoc(fb.collection(db,'users'),user)}else{saveUserLocal(user)}
-      $('userFirstName').value='';$('userPin').value='';selectedUserCategory='';document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));$('userCategoryCards').classList.remove('error');showCenterPopup('✅ Utilisateur créé','done');toast('Utilisateur créé.');
+      $('userFirstName').value='';$('userPin').value='';selectedUserCategory='', selectedUserRole='Utilisateur';document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));$('userCategoryCards').classList.remove('error');showCenterPopup('✅ Utilisateur créé','done');toast('Utilisateur créé.');
     }catch(e){console.error(e);saveUserLocal({...user,createdAt:new Date().toISOString()});showCenterPopup('✅ Utilisateur créé','done');toast('Firebase indisponible : utilisateur créé en local.');}
     finally{$('createUserBtn').disabled=false}
   }
-    function bindUI(){if($('loginBtn'))$('loginBtn').onclick=loginUser;if($('loginPin'))$('loginPin').onkeydown=e=>{if(e.key==='Enter')loginUser()};if($('logoutBtn'))$('logoutBtn').onclick=logoutUser;if($('goIntervention'))$('goIntervention').onclick=()=>showPage('appPage');if($('goReport'))$('goReport').onclick=()=>showPage('reportPage');if($('exportCsvBtn'))$('exportCsvBtn').onclick=exportInterventionsCsv;if($('exportXlsxBtn'))$('exportXlsxBtn').onclick=exportInterventionsXlsx;if($('goUser'))$('goUser').onclick=()=>{showPage('userPage');showUserSub(null)};if($('backHomeFromUser'))$('backHomeFromUser').onclick=()=>showPage('homePage');if($('backHomeFromApp'))$('backHomeFromApp').onclick=()=>showPage('homePage');if($('backHomeFromReport'))$('backHomeFromReport').onclick=()=>showPage('homePage');if($('homeFromManageUsers'))$('homeFromManageUsers').onclick=()=>showPage('homePage');if($('openCreateUser'))$('openCreateUser').onclick=()=>showUserSub('create');if($('openManageUsers'))$('openManageUsers').onclick=()=>showUserSub('manage');if($('backUserMenu1'))$('backUserMenu1').onclick=()=>showUserSub(null);if($('backUserMenu2'))$('backUserMenu2').onclick=()=>showUserSub(null);if($('refreshUsers'))$('refreshUsers').onclick=()=>renderUsers();document.querySelectorAll('[data-user-category]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedUserCategory=b.dataset.userCategory;$('userCategoryCards').classList.remove('error')});if($('createUserBtn'))$('createUserBtn').onclick=createUser;document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');priority=b.dataset.priority});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{if(!getAllowedCategories().includes(b.dataset.category)){toast('Accès non autorisé pour cette catégorie.');return}document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedCategory=b.dataset.category;$('category').value=selectedCategory;$('categoryCards').classList.remove('error')});$('category').onchange=e=>{if(e.target.value&&!getAllowedCategories().includes(e.target.value)){toast('Accès non autorisé pour cette catégorie.');e.target.value='';selectedCategory='';return}selectedCategory=e.target.value;$('categoryCards').classList.remove('error');document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===selectedCategory))};document.querySelectorAll('.stat').forEach(b=>b.onclick=()=>openList(b.dataset.filter));$('backCreate').onclick=$('closeList').onclick=()=>{$('listPanel').style.display='none';$('createPanel').style.display='block'};$('search').oninput=renderList;$('createBtn').onclick=createTask;$('categoryClose').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};$('categoryCancel').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};document.querySelectorAll('.category-choice').forEach(b=>b.onclick=()=>chooseCategoryFromModal(b.dataset.modalCategory));}
-  async function createTask(){const title=$('title').value.trim(); if(!selectedCategory){showCategoryModal('task');return} if(!getAllowedCategories().includes(selectedCategory)){toast('Accès non autorisé pour cette catégorie.');return} if(!title){toast('Ajoute un titre pour créer l’intervention.');return} const task={title,description:$('description').value.trim(),priority,category:selectedCategory,status:'À faire',createdBy:currentUser?.firstName||'Utilisateur',createdAt:cloud&&fb?fb.serverTimestamp():new Date().toISOString()};$('createBtn').disabled=true;try{if(cloud&&fb){await fb.addDoc(fb.collection(db,'interventions'),task)}else{task.id=String(Date.now());tasks.unshift(task);saveLocal();setCounts();if($('listPanel').style.display!=='none')renderList()}$('title').value='';$('description').value='';selectedCategory='';$('category').value='';document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));showCheck();toast('Intervention créée et notifiée.')}catch(e){console.error(e);task.id=String(Date.now());task.createdAt=new Date().toISOString();tasks.unshift(task);saveLocal();setCounts();showCheck();toast('Firebase indisponible : intervention créée en local.')}finally{$('createBtn').disabled=false}}
+    function bindUI(){if($('loginBtn'))$('loginBtn').onclick=loginUser;if($('loginPin'))$('loginPin').onkeydown=e=>{if(e.key==='Enter')loginUser()};if($('logoutBtn'))$('logoutBtn').onclick=logoutUser;if($('goIntervention'))$('goIntervention').onclick=()=>{showPage('appPage');$('listPanel').style.display='none';$('createPanel').style.display='block'};if($('goReport'))$('goReport').onclick=()=>showPage('reportPage');if($('exportCsvBtn'))$('exportCsvBtn').onclick=exportInterventionsCsv;if($('exportXlsxBtn'))$('exportXlsxBtn').onclick=exportInterventionsXlsx;if($('goUser'))$('goUser').onclick=()=>{showPage('userPage');showUserSub(null)};if($('backHomeFromUser'))$('backHomeFromUser').onclick=()=>showPage('homePage');if($('backHomeFromApp'))$('backHomeFromApp').onclick=()=>showPage('homePage');if($('backHomeFromReport'))$('backHomeFromReport').onclick=()=>showPage('homePage');if($('homeFromManageUsers'))$('homeFromManageUsers').onclick=()=>showPage('homePage');if($('openCreateUser'))$('openCreateUser').onclick=()=>showUserSub('create');if($('openManageUsers'))$('openManageUsers').onclick=()=>showUserSub('manage');if($('backUserMenu1'))$('backUserMenu1').onclick=()=>showUserSub(null);if($('backUserMenu2'))$('backUserMenu2').onclick=()=>showUserSub(null);if($('refreshUsers'))$('refreshUsers').onclick=()=>renderUsers();document.querySelectorAll('[data-user-category]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-user-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedUserCategory=b.dataset.userCategory;$('userCategoryCards').classList.remove('error')});document.querySelectorAll('[data-user-role]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-user-role]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedUserRole=b.dataset.userRole});if($('createUserBtn'))$('createUserBtn').onclick=createUser;document.querySelectorAll('.pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));b.classList.add('active');priority=b.dataset.priority});document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{if(!getAllowedCategories().includes(b.dataset.category)){toast('Accès non autorisé pour cette catégorie.');return}document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));b.classList.add('active');selectedCategory=b.dataset.category;$('category').value=selectedCategory;$('categoryCards').classList.remove('error')});$('category').onchange=e=>{if(e.target.value&&!getAllowedCategories().includes(e.target.value)){toast('Accès non autorisé pour cette catégorie.');e.target.value='';selectedCategory='';return}selectedCategory=e.target.value;$('categoryCards').classList.remove('error');document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===selectedCategory))};document.querySelectorAll('.stat').forEach(b=>b.onclick=()=>{showPage('appPage');openList(b.dataset.filter)});$('backCreate').onclick=$('closeList').onclick=()=>{$('listPanel').style.display='none';$('createPanel').style.display='block'};$('search').oninput=renderList;if($('clearSearch'))$('clearSearch').onclick=()=>{$('search').value='';renderList();$('search').focus()};if($('timeSearch'))$('timeSearch').oninput=updateTimeStats;if($('timeDateStart'))$('timeDateStart').onchange=updateTimeStats;if($('timeDateEnd'))$('timeDateEnd').onchange=updateTimeStats;if($('clearTimeSearch'))$('clearTimeSearch').onclick=()=>{$('timeSearch').value='';updateTimeStats();$('timeSearch').focus()};$('createBtn').onclick=createTask;if($('toggleMultiBtn'))$('toggleMultiBtn').onclick=()=>{multiMode=!multiMode;$('toggleMultiBtn').classList.toggle('active',multiMode);$('multiCreateBox').classList.toggle('show',multiMode);$('singleEndroitField').style.display=multiMode?'none':'block'};$('categoryClose').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};$('categoryCancel').onclick=()=>{pendingCreateAfterCategory=false;pendingCreateUserAfterCategory=false;hideCategoryModal()};document.querySelectorAll('.category-choice').forEach(b=>b.onclick=()=>chooseCategoryFromModal(b.dataset.modalCategory));if($('resolutionClose'))$('resolutionClose').onclick=closeResolutionModal;if($('resolutionResolve'))$('resolutionResolve').onclick=resolveCurrentTask;if($('resolutionEscalate'))$('resolutionEscalate').onclick=escalateCurrentTask;}
+  async function createTask(){
+    const title=$('title').value.trim();
+    const description=$('description').value.trim();
+    const scheduledAt=getScheduledAtIso();
+    if(!selectedCategory){showCategoryModal('task');return}
+    if(!getAllowedCategories().includes(selectedCategory)){toast('Accès non autorisé pour cette catégorie.');return}
+    if(!title){toast('Ajoute un titre pour créer l’intervention.');return}
+    const places=multiMode?parsePlaces($('multiPlaces')?.value):[($('endroit')?.value||'').trim()];
+    if(multiMode && !places.length){toast('Ajoute au moins un endroit pour la création multiple.');return}
+    const nowIso=new Date().toISOString();
+    const base={description,priority,category:selectedCategory,status:'À faire',createdBy:currentUser?.firstName||'Utilisateur',createdAt:cloud&&fb?fb.serverTimestamp():nowIso};
+    if(scheduledAt){base.scheduledAt=scheduledAt;base.visibleAt=scheduledAt}
+    const toCreate=places.map((place,idx)=>({
+      ...base,
+      title,
+      endroit:place||'',
+      batchIndex:multiMode?(idx+1):null,
+      batchTotal:multiMode?places.length:null
+    }));
+    $('createBtn').disabled=true;
+    try{
+      if(cloud&&fb){
+        for(const task of toCreate){await fb.addDoc(fb.collection(db,'interventions'),task)}
+      }else{
+        toCreate.forEach((task,i)=>{task.id=String(Date.now()+i); if(task.createdAt&&typeof task.createdAt!=='string')task.createdAt=nowIso; tasks.unshift(task)});
+        saveLocal();setCounts();if($('listPanel').style.display!=='none')renderList();
+      }
+      $('title').value='';
+      if($('endroit'))$('endroit').value='';
+      if($('multiPlaces'))$('multiPlaces').value='';
+      $('description').value='';
+      selectedCategory='';$('category').value='';
+      document.querySelectorAll('[data-category]').forEach(x=>x.classList.remove('active'));
+      showCheck();toast(multiMode?`${toCreate.length} interventions créées.`:'Intervention créée et notifiée.');
+    }catch(e){
+      console.error(e);
+      toCreate.forEach((task,i)=>{task.id=String(Date.now()+i);task.createdAt=nowIso;tasks.unshift(task)});
+      saveLocal();setCounts();showCheck();toast('Firebase indisponible : intervention créée en local.');
+    }finally{$('createBtn').disabled=false}
+  }
+  function parsePlaces(raw){
+    return String(raw||'').split(/[\n;,\t]+/).map(s=>s.trim()).filter(Boolean);
+  }
+  function getScheduledAtIso(){
+    const d=($('scheduleDate')?.value||'').trim();
+    const t=($('scheduleTime')?.value||'07:00').trim()||'07:00';
+    if(!d)return '';
+    const dt=new Date(`${d}T${t}:00`);
+    if(isNaN(dt))return '';
+    return dt.toISOString();
+  }
   async function initFirebase(){if(!(cfg&&cfg.apiKey&&cfg.appId)){throw new Error('Config Firebase absente')} const appMod=await import('https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js'); const fs=await import('https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js'); const app=appMod.initializeApp(cfg); db=fs.getFirestore(app); fb=fs; cloud=true; $('cloudStatus').textContent='Cloud Firebase connecté · temps réel actif'; const q=fs.query(fs.collection(db,'interventions'),fs.orderBy('createdAt','desc')); fs.onSnapshot(q,(snap)=>{const before=tasks.length; tasks=snap.docs.map(d=>({id:d.id,...d.data()})); setCounts(); if($('listPanel').style.display!=='none')renderList(); if(before&&tasks.length>before)toast('Nouvelle intervention reçue.')},(err)=>{console.error(err);$('cloudStatus').textContent='Cloud connecté · lecture limitée';}); const uq=fs.query(fs.collection(db,'users'),fs.orderBy('createdAt','desc')); fs.onSnapshot(uq,(snap)=>{users=snap.docs.map(d=>({id:d.id,...d.data()}));renderUsers();if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) disponible(s)`:'Aucun utilisateur créé';if(!currentUser)tryAutoLogin();},(err)=>{console.error(err);});}
   bindUI(); loadLocal(); loadUsersLocal(); renderUsers(); loadCurrentUser(); updateSessionUi(); setCounts(); $('cloudStatus').textContent='Mode local · Firebase en cours de connexion'; if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) local(aux)`:'Chargement des utilisateurs...'; tryAutoLogin(); initFirebase().catch(e=>{console.warn(e);cloud=false;$('cloudStatus').textContent='Mode local · Firebase non configuré';if($('loginCloud'))$('loginCloud').textContent=users.length?`${users.length} utilisateur(s) local(aux)`:'Aucun utilisateur local';renderUsers();tryAutoLogin();});
 })();
